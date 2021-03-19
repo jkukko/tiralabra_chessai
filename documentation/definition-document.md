@@ -29,3 +29,4 @@ Alpha-beta pruning is used reduce time complexity of using min-max algorithm.
 ## General information
 
 * bachelor's in science computer science
+* language: english
