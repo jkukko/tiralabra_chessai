@@ -2,7 +2,7 @@
 
 
 Weekly reports
-- [week 1](./cource_documentation/weekly-reports/week1.md)
+- [week 1](./course_documentation/weekly-reports/week1.md)
 
 Documentation
-- [definition](./cource_documentation/definition-document.md)
+- [definition](./course_documentation/definition-document.md)
