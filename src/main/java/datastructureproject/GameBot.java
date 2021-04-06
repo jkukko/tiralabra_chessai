@@ -12,12 +12,30 @@ package datastructureproject;
 
 import chess.bot.ChessBot;
 import chess.engine.GameState;
+import datastructureproject.ChessBoard;
 
 public class GameBot implements ChessBot {
+    private ChessBoard board;
+    
+    public GameBot() {
+        this.board = new ChessBoard();
+        this.board.initBoard();
+    }
+    
+    public void printBoard() {
+        this.board.printBoard();
+    }
 
     @Override
     public String nextMove(GameState gamestate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.board.printBoard();
+        return "h7h5";
     }
+    
+    // GET LEGAL MOVE
+    
+    
+    
+    // GET POSSIBLE MOVES
     
 }
