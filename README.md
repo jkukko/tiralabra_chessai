@@ -11,3 +11,4 @@ Documentation
 
 Test Coverage
 - [Week 2](./course_documentation/images/week2_test_coverage.png)
+- [Week 3](./course_documentation/images/week3_test_coverage.png)

@@ -16,6 +16,7 @@ This week I was able of moving forward with the project by using my linux laptop
 
 ## What remained unclear or caused difficulties?
 * the actual bot is still unclear
+* missing totally tests
 
 ## What do I do next?
 * finnish the actual chess game --> it will give random but allowed moves to xboard --> same as the testbot
