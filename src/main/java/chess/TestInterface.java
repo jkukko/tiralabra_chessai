@@ -25,6 +25,7 @@ public class TestInterface {
         
         GameState gs = new GameState();
         gs.setMoves("a2a3,b8c6,e2e3");
+        System.out.println(gs.getLatestMove());
 /*        
         ChessBot bot = new TestBot();
         ChessBot bot2 = new GameBot();
@@ -36,11 +37,18 @@ public class TestInterface {
         board.printBoard();
 
         ChessBot bot = new GameBot();
-        bot.nextMove(gs);
+        System.out.println(bot.nextMove(gs));
 */
-        Move move = new Move("a2a3");
-        System.out.println(move.getOldX() + " " + move.getOldY());
-        System.out.println(move.getNewX() + " " + move.getNewY());
+        ChessBoard board = new ChessBoard();
+        board.initBoard();
+        board.printBoard();
+        Coordinate coor = new Coordinate("a2");
+        String piece = board.getBoard()[coor.getY()][coor.getX()];
+        System.out.println(piece);
+
+        //Move move = new Move("a2a3");
+        //System.out.println(move.getOldX() + " " + move.getOldY());
+        //System.out.println(move.getNewX() + " " + move.getNewY());
     }
     
 }

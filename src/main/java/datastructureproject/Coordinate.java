@@ -24,28 +24,28 @@ public class Coordinate {
         String character = this.coordinate.substring(0,1);
         
         if (character.equals("a")) {
-            return 0;
+            return 1;
         }
         
         if (character.equals("b")) {
-            return 1;
-        }
-        if (character.equals("c")) {
             return 2;
         }
-        if (character.equals("d")) {
+        if (character.equals("c")) {
             return 3;
+        }
+        if (character.equals("d")) {
+            return 4;
         }        
         if (character.equals("e")) {
-            return 4;
-        }
-        if (character.equals("f")) {
             return 5;
         }
-        if (character.equals("g")) {
+        if (character.equals("f")) {
             return 6;
+        }
+        if (character.equals("g")) {
+            return 7;
         }           
-        return 7;
+        return 8;
     }
     
     public int getY() {

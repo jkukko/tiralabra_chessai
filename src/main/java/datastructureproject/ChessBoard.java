@@ -13,7 +13,7 @@ public class ChessBoard {
     private String[][] board;
     
     public ChessBoard() {
-        this.board = new String[8][8];
+        this.board = new String[9][8];
     }
 
     public String[][] getBoard() {
@@ -21,19 +21,19 @@ public class ChessBoard {
     }
     
     public void initBoard() {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 1; i < 9; i++) {
             for (int j = 0; j < 8; j++) {
-                if (i == 1) {
-                    this.board[1][j] = "p";
-                } else if ((i == 0 && j == 0) || (i == 0 && j == 7)) {
+                if (i == 2) {
+                    this.board[2][j] = "p";
+                } else if ((i == 1 && j == 0) || (i == 1 && j == 7)) {
                     this.board[i][j] = "r";
-                } else if ((i == 0 && j == 1) || (i == 0 && j == 6)) {
+                } else if ((i == 1 && j == 1) || (i == 1 && j == 6)) {
                     this.board[i][j] = "n";
-                } else if ((i == 0 && j == 2) || (i == 0 && j == 5)) {
+                } else if ((i == 1 && j == 2) || (i == 1 && j == 5)) {
                     this.board[i][j] = "b";
-                } else if (i == 0 && j == 3) {
+                } else if (i == 1 && j == 3) {
                     this.board[i][j] = "q";
-                } else if (i == 0 && j == 4) {
+                } else if (i == 1 && j == 4) {
                     this.board[i][j] = "k";
                 } else if (i == 6) {
                     this.board[6][j] = "P";
@@ -55,7 +55,7 @@ public class ChessBoard {
     }
     
     public void printBoard() {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 1; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 System.out.print(this.board[i][j]);
             }

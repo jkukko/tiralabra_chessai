@@ -32,5 +32,13 @@ public class Move {
 
     public int getNewY() {
         return this.newCoordinate.getY();
-    } 
+    }
+    
+    public Coordinate getOldCoordinate() {
+        return this.oldCoordinate;
+    }
+    
+    public Coordinate getNewCoordinate() {
+        return this.newCoordinate;
+    }
 }
