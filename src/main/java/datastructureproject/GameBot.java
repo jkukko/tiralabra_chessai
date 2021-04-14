@@ -12,26 +12,24 @@ package datastructureproject;
 
 import chess.bot.ChessBot;
 import chess.engine.GameState;
+import datastructureproject.ChessLogic;
 import datastructureproject.ChessBoard;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GameBot implements ChessBot {
     private ChessBoard board;
-    private int counter;
-    private List<String> movesList;
+    private List<Move> movesList;
+    private ChessLogic logic;
+    private Random random; 
     
     public GameBot() {
         this.board = new ChessBoard();
         this.board.initBoard();
-        this.counter = -1;
         this.movesList = new ArrayList<>();
-        this.movesList.add("a7a6");
-        this.movesList.add("b7b6");
-        this.movesList.add("c7c6");
-        this.movesList.add("d7d6");
-        this.movesList.add("e7e6");
-        this.movesList.add("f7f6");
+        this.logic = new ChessLogic();
+        this.random = new Random();
     }
     
     public void printBoard() {
@@ -40,8 +38,9 @@ public class GameBot implements ChessBot {
 
     @Override
     public String nextMove(GameState gamestate) {
-        this.counter += 1;
-        return this.movesList.get(counter);
+        List<Move> moves = this.logic.legalMoves(this.board);
+        Move mv = moves.get(this.random.nextInt(moves.size()));
+        return mv.getMove();
     }
     
     // GET LEGAL MOVE

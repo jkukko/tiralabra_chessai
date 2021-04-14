@@ -16,6 +16,47 @@ public class Coordinate {
         this.coordinate = coordinate.trim().toLowerCase();
     }
     
+    public Coordinate(int coordinateX, int coordinateY) {
+        String coor = "";
+        
+        if (coordinateX == 1) {
+            coor = "a";
+        }
+        
+        if (coordinateX == 2) {
+            coor = "b";
+        }
+
+        if (coordinateX == 3) {
+            coor = "c";
+        }
+
+        if (coordinateX == 4) {
+            coor = "d";
+        }        
+
+        if (coordinateX == 5) {
+            coor = "e";
+        }        
+
+        if (coordinateX == 6) {
+            coor = "f";
+        }
+        
+        if (coordinateX == 7) {
+            coor = "g";
+        }
+
+        if (coordinateX == 8) {
+            coor = "h";
+        }
+
+        coor = coor + coordinateY;
+        
+        this.coordinate = coor;
+        
+    }
+    
     public String getCoordinate() {
         return this.coordinate;
     }

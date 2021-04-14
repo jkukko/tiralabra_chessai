@@ -18,6 +18,11 @@ public class Move {
         this.newCoordinate = new Coordinate(move.substring(2,4));
     }
     
+    public Move(Coordinate oldCoordinate, Coordinate newCoordinate) {
+        this.oldCoordinate = oldCoordinate;
+        this.newCoordinate = newCoordinate;
+    }
+    
     public int getOldX() {
         return this.oldCoordinate.getX();
     }
@@ -40,5 +45,9 @@ public class Move {
     
     public Coordinate getNewCoordinate() {
         return this.newCoordinate;
+    }
+    
+    public String getMove() {
+        return this.oldCoordinate.getCoordinate() + this.newCoordinate.getCoordinate();
     }
 }
