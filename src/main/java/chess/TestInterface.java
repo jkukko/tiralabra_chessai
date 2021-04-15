@@ -48,6 +48,7 @@ public class TestInterface {
         ChessBoard board = new ChessBoard();
         board.initBoard(); 
         ChessLogic logic = new ChessLogic();
+        GameBot gb = new GameBot();
             
         String x = "joo";
         while (true) {
