@@ -31,6 +31,8 @@ public class ChessLogic {
                     possibleMoves = checkRook(coor, board);
                 } else if (piece == 4) {
                     possibleMoves = checkBishop(coor, board);
+                } else if (piece == 3) {
+                    possibleMoves = checkKnight(coor, board);
                 }
                 moves.addAll(possibleMoves);
             }
@@ -95,6 +97,92 @@ public class ChessLogic {
     private List<Move> checkKnight(Coordinate coor, ChessBoard board) {
        int piece = board.getBoard()[coor.getY()][coor.getX()];
        List<Move> moves = new ArrayList<>();
+       
+       if (piece == 3) {
+           
+            if ((coor.getX() + 2 < 9) && (coor.getY() + 1 < 9)) {
+                int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX() + 2];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX()+2, coor.getY() + 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }
+                        
+            if ((coor.getX() + 1 < 9) && (coor.getY() + 2 < 9)) {
+                int possiblePosition = board.getBoard()[coor.getY() + 2][coor.getX() + 1];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() + 2);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }
+
+            if ((coor.getX() + 1 < 9) && (coor.getY() - 2 > 0)) {
+                int possiblePosition = board.getBoard()[coor.getY() - 2][coor.getX() + 1];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() - 2);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }            
+
+            if ((coor.getX() + 2 < 9) && (coor.getY() - 1 > 0)) {
+                int possiblePosition = board.getBoard()[coor.getY() - 1][coor.getX() + 2];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() + 2, coor.getY() - 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }            
+
+            // This is for help
+            
+            if ((coor.getX() - 2 > 0) && (coor.getY() + 1 < 9)) {
+                int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX() - 2];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() - 2, coor.getY() + 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }
+                        
+            if ((coor.getX() - 1 > 0) && (coor.getY() + 2 < 9)) {
+                int possiblePosition = board.getBoard()[coor.getY() + 2][coor.getX() - 1];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() + 2);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }
+
+            if ((coor.getX() - 1 < 9) && (coor.getY() - 2 > 0)) {
+                int possiblePosition = board.getBoard()[coor.getY() - 2][coor.getX() - 1];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() - 2);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }            
+
+            if ((coor.getX() - 2 < 9) && (coor.getY() - 1 > 0)) {
+                int possiblePosition = board.getBoard()[coor.getY() - 1][coor.getX() - 2];
+                if(possiblePosition == 0 || possiblePosition >= 11) {
+                    Coordinate newCoordinate = new Coordinate(coor.getX() - 2, coor.getY() - 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    moves.add(move);                    
+                }
+            }                       
+       
+       }
        
        
        return moves;
