@@ -33,6 +33,10 @@ public class ChessLogic {
                     possibleMoves = checkBishop(coor, board);
                 } else if (piece == 3) {
                     possibleMoves = checkKnight(coor, board);
+                } else if (piece == 5) {
+                    possibleMoves = checkQueen(coor, board);
+                } else if (piece == 6) {
+                    possibleMoves = checkKing(coor, board);
                 }
                 moves.addAll(possibleMoves);
             }
@@ -192,7 +196,7 @@ public class ChessLogic {
        int piece = board.getBoard()[coor.getY()][coor.getX()];
        List<Move> moves = new ArrayList<>();
        
-       if (piece == 2) {
+       if (piece == 2 || piece == 5) {
            int earlier = 0;
            
            // Rook moves upwards
@@ -278,7 +282,7 @@ public class ChessLogic {
        int piece = board.getBoard()[coor.getY()][coor.getX()];
        List<Move> moves = new ArrayList<>();
        
-       if (piece == 4) {
+       if (piece == 4 || piece == 5) {
            
             int earlier = 0;
             int xCoor = coor.getX() + 1;
@@ -385,6 +389,64 @@ public class ChessLogic {
        }
        
        return moves;
+    }
+    
+    public List<Move> checkQueen(Coordinate coor, ChessBoard board) {
+        int piece = board.getBoard()[coor.getY()][coor.getX()];
+        List<Move> moves = new ArrayList<>();
+        List<Move> possibleMoves = new ArrayList<>();
+        
+        possibleMoves = checkBishop(coor, board);
+        possibleMoves.addAll(checkRook(coor, board));
+        moves.addAll(possibleMoves);
+       
+       return moves;
+    }
+    
+    public List<Move> checkKing(Coordinate coor, ChessBoard board) {
+        int piece = board.getBoard()[coor.getY()][coor.getX()];
+        List<Move> moves = new ArrayList<>();
+        
+        if (coor.getY() < 8) {
+            int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX()];
+            if ((possiblePosition == 0) || (possiblePosition > 10)) {
+                Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() + 1);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+            }
+        }
+
+        if (coor.getY() > 0) {
+            int possiblePosition = board.getBoard()[coor.getY() - 1][coor.getX()];
+            if ((possiblePosition == 0) || (possiblePosition > 10)) {
+                Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() - 1);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+            }
+        }
+        
+        if (coor.getX() < 8) {
+            int possiblePosition = board.getBoard()[coor.getY()][coor.getX() + 1];
+            if ((possiblePosition == 0) || (possiblePosition > 10)) {
+                Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY());
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+            }
+        }
+
+        if (coor.getX() > 0) {
+            int possiblePosition = board.getBoard()[coor.getY()][coor.getX() - 1];
+            if ((possiblePosition == 0) || (possiblePosition > 10)) {
+                Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY());
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+            }
+        }        
+        return moves;
     }
 
     
