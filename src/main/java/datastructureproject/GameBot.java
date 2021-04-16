@@ -65,7 +65,7 @@ public class GameBot implements ChessBot {
     public Move getMove() throws Exception {
         List<Move> moves = new ArrayList<>();
         moves = this.logic.legalMoves(this.board);
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(1/5);
         Move mv = moves.get(this.random.nextInt(moves.size()));
         return mv;
     }

@@ -29,6 +29,8 @@ public class ChessLogic {
                     possibleMoves = checkPawnMoves(coor, board);
                 } else if (piece == 2) {
                     possibleMoves = checkRook(coor, board);
+                } else if (piece == 4) {
+                    possibleMoves = checkBishop(coor, board);
                 }
                 moves.addAll(possibleMoves);
             }
@@ -179,6 +181,119 @@ public class ChessLogic {
                 }
            }           
 
+       }
+       
+       return moves;
+    }
+    
+    public List<Move> checkBishop(Coordinate coor, ChessBoard board) {
+       int piece = board.getBoard()[coor.getY()][coor.getX()];
+       List<Move> moves = new ArrayList<>();
+       
+       if (piece == 4) {
+           
+            int earlier = 0;
+            int xCoor = coor.getX() + 1;
+            for (int i = coor.getY() + 1; i < 9; i++) {
+                earlier = board.getBoard()[i][xCoor];
+               
+                if ((earlier > 0 && earlier < 7)) {
+                   break;
+                }
+                
+                Coordinate newCoordinate = new Coordinate(xCoor, i);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+
+                if (earlier >= 11) {
+                    break;
+                }
+                
+                xCoor +=1;
+                
+                if (xCoor == 9) {
+                   break;
+                }
+           }
+           
+           earlier = 0;
+           xCoor = coor.getX() - 1;
+           for (int i = coor.getY() + 1; i < 9; i++) {
+               earlier = board.getBoard()[i][xCoor];
+               
+               if ((earlier > 0 && earlier < 7)) {
+                   break;
+               }
+               
+
+               
+                Coordinate newCoordinate = new Coordinate(xCoor, i);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+
+                if (earlier >= 11) {
+                    break;
+                }
+                
+                xCoor -=1;
+                
+                if (xCoor == 0) {
+                   break;
+                }
+            }
+
+            earlier = 0;
+            xCoor = coor.getX() + 1;
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
+               
+                if ((earlier > 0 && earlier < 7)) {
+                   break;
+                }
+                
+                Coordinate newCoordinate = new Coordinate(xCoor, i);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+
+                if (earlier >= 11) {
+                    break;
+                }
+                
+                xCoor +=1;
+                
+                if (xCoor == 9) {
+                   break;
+                }
+            }           
+
+            earlier = 0;
+            xCoor = coor.getX() - 1;
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
+               
+                if ((earlier > 0 && earlier < 7)) {
+                   break;
+                }
+                
+                Coordinate newCoordinate = new Coordinate(xCoor, i);
+                Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                Move move = new Move(oldCoordinate, newCoordinate);
+                moves.add(move);
+
+                if (earlier >= 11) {
+                    break;
+                }
+                
+                xCoor -=1;
+                
+                if (xCoor == 0) {
+                   break;
+                }
+           }            
+            
        }
        
        return moves;
