@@ -15,6 +15,10 @@ public class ChessBoard {
     public ChessBoard() {
         this.board = new int[9][9];
     }
+    
+    public ChessBoard(ChessBoard board) {
+        this.board = board.getBoard();
+    }
 
     public int[][] getBoard() {
         return this.board;
@@ -93,6 +97,16 @@ public class ChessBoard {
                 }
             }
             System.out.println("");
+        }
+    }
+    
+    public void setBoard(ChessBoard initBoard) {
+        
+        for (int i = 1; i < 9; i++) {
+            for (int j = 1; j < 9; j++) {
+                this.board[i][j] = initBoard.getBoard()[i][j];
+            }
+            
         }
     }
     

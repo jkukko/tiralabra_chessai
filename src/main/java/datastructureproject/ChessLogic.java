@@ -58,29 +58,38 @@ public class ChessLogic {
             if (coor.getX() < 8) {
                 int possiblePlace = board.getBoard()[coor.getY() + 1][coor.getX() + 1];
                 if (possiblePlace != 0 && possiblePlace >= 11 && coor.getY() < 8) {
-                   Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() + 1);
-                   Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
-                   Move move = new Move(oldCoordinate, newCoordinate);
-                   moves.add(move);
+                    Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() + 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }
+                    
                 }                
             }
             
             if (coor.getX() > 1) {
                 int possiblePlace = board.getBoard()[coor.getY() + 1][coor.getX() - 1];
                 if (possiblePlace != 0 && possiblePlace >= 11) {
-                   Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() + 1);
-                   Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
-                   Move move = new Move(oldCoordinate, newCoordinate);
-                   moves.add(move);
+                    Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() + 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }
+                    
                 }
             }
             
             if (coor.getY() < 8) {
                 if (board.getBoard()[coor.getY() + 1][coor.getX()] == 0) {
-                   Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() + 1);
-                   Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
-                   Move move = new Move(oldCoordinate, newCoordinate);
-                   moves.add(move);
+                    Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() + 1);
+                    Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
+                    Move move = new Move(oldCoordinate, newCoordinate);
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }
+                    
                 }                
             }
 
@@ -413,7 +422,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() + 1);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
             }
         }
 
@@ -423,7 +434,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() - 1);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
             }
         }
         
@@ -433,7 +446,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY());
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
             }
         }
 
@@ -443,7 +458,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY());
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
             }
         }
         
@@ -455,7 +472,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() - 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);
+                    if (checkMate(move, board)) {
+                       moves.add(move);
+                    }
                 }            
             }
 
@@ -465,7 +484,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() - 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);
+                    if (checkMate(move, board)) {
+                       moves.add(move);
+                    }
                 }            
             }
         }
@@ -478,7 +499,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() + 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);
+                    if (checkMate(move, board)) {
+                       moves.add(move);
+                    }
                 }            
             }
 
@@ -488,13 +511,293 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() + 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);
+                    if (checkMate(move, board)) {
+                       moves.add(move);
+                    }
                 }            
             }
         }
         
-
         return moves;
+    }
+    
+    public boolean checkMate(Move move, ChessBoard board) {
+        Coordinate coorOld = move.getOldCoordinate();
+        Coordinate coorNew = move.getNewCoordinate();
+        int piece = board.getBoard()[coorOld.getY()][coorOld.getX()];
+        
+        if (piece == 6) {
+            
+            // Check Pawn attack x+1
+            if (coorNew.getX() < 8) {
+                if (board.getBoard()[coorNew.getY()+1][coorNew.getX()+1] == 11) {
+                    return false;
+                }                
+            }
+            
+            // Check Pawn attack x-1
+            if (coorNew.getX() > 0) {
+                if (board.getBoard()[coorNew.getY()+1][coorNew.getX()-1] == 11) {
+                    return false;
+                }                
+            }            
+            
+            // Check knigh attack y+2 x+1
+            if (coorOld.getY() < 6 && coorOld.getX() < 7) {
+                if (board.getBoard()[coorNew.getY()+2][coorNew.getX()+1] == 13) {
+                    return false;
+                }
+            }
+
+            // Check knigh attack y+2 x-1
+            if (coorOld.getY() < 6 && coorOld.getX() > 1) {
+                if (board.getBoard()[coorNew.getY()+2][coorNew.getX()-1] == 13) {
+                    return false;
+                }
+            }
+            
+            // Check knigh attack y-2 x+1
+            if (coorOld.getY() > 2 && coorOld.getX() < 7) {
+                if (board.getBoard()[coorNew.getY()-2][coorNew.getX()+1] == 13) {
+                    return false;
+                }
+            }
+
+            // Check knigh attack y-2 x-1
+            if (coorOld.getY() > 2 && coorOld.getX() > 1) {
+                if (board.getBoard()[coorNew.getY()-2][coorNew.getX()-1] == 13) {
+                    return false;
+                }
+            }
+            
+            // Check knight attact y+1 x+2   
+            if (coorOld.getY() < 7 && coorOld.getX() < 6) {
+                if (board.getBoard()[coorNew.getY()+1][coorNew.getX()+2] == 13) {
+                    return false;
+                }
+            }
+            
+            // Check knight attact y-1 x+2
+            if (coorOld.getY() > 1 && coorOld.getX() < 6) {
+                if (board.getBoard()[coorNew.getY()-1][coorNew.getX()+2] == 13) {
+                    return false;
+                }
+            }
+
+            
+            
+            // Check knight attact y+1 x-2   
+            if (coorOld.getY() < 7 && coorOld.getX() > 2) {
+                if (board.getBoard()[coorNew.getY()+1][coorNew.getX()-2] == 13) {
+                    return false;
+                }
+            }
+            
+            // Check knight attact y-1 x-2
+            if (coorOld.getY() > 1 && coorOld.getX() > 6) {
+                if (board.getBoard()[coorNew.getY()-1][coorNew.getX()-2] == 13) {
+                    return false;
+                }
+            }            
+                
+            
+            // check Rook and queen Rook attack right
+            for (int i = coorNew.getX(); i < 9; i++) {
+                int possiblePosition = board.getBoard()[coorNew.getY()][i];
+                if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                    break;
+                }
+                
+                if (possiblePosition == 12 || possiblePosition == 15) {
+                    return false;
+                }
+            }
+
+            // check Rook and queen Rook attack left
+            for (int i = coorNew.getX(); i > 0; i--) {
+                int possiblePosition = board.getBoard()[coorNew.getY()][i];
+                if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                    break;
+                }
+                
+                if (possiblePosition == 12 || possiblePosition == 15) {
+                    return false;
+                }
+            }            
+            
+            // check Rook and queen Rook attack up
+            for (int i = coorNew.getY(); i < 9; i++) {
+                int possiblePosition = board.getBoard()[i][coorNew.getX()];
+                if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                    break;
+                }
+                
+                if (possiblePosition == 12 || possiblePosition == 15) {
+                    return false;
+                }
+            }
+            
+            // check Rook and queen Rook attack down
+            for (int i = coorNew.getY(); i > 0; i--) {
+                int possiblePosition = board.getBoard()[i][coorNew.getX()];
+                if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                    break;
+                }
+                
+                if (possiblePosition == 12 || possiblePosition == 15) {
+                    return false;
+                }
+            }
+            
+            // check bishop and quuen bishop attack right-up
+            for (int i = 1; i < 8; i++) {
+                int x = coorNew.getX() + i;
+                int y = coorNew.getY() + i;  
+                if (x == 9 || y == 9) {
+                    break;
+                }
+                int possiblePosition = board.getBoard()[y][x];
+                if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                    break;
+                }
+                if (possiblePosition == 14 || possiblePosition == 15) {
+                    return false;
+                }                    
+            }
+            
+            // check bishop and quuen bishop attack right-down
+            for (int i = 1; i < 8; i++) {
+                int x = coorNew.getX() + i;
+                int y = coorNew.getY() - i;              
+                if (x == 9 || y == 0) {
+                    break;
+                }
+                int possiblePosition = board.getBoard()[y][x];
+                if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                    break;
+                }
+                if (possiblePosition == 14 || possiblePosition == 15) {
+                    return false;
+                }                    
+            }
+
+            // check bishop and quuen bishop attack left-up
+            for (int i = 1; i < 8; i++) {
+                int x = coorNew.getX() - i;
+                int y = coorNew.getY() + i;              
+                if (x == 0 || y == 9) {
+                    break;
+                }
+                int possiblePosition = board.getBoard()[y][x];
+                if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                    break;
+                }
+                if (possiblePosition == 14 || possiblePosition == 15) {
+                    return false;
+                }                    
+            }            
+
+            // check bishop and quuen bishop attack left-down
+            for (int i = 1; i < 8; i++) {
+                int x = coorNew.getX() - i;
+                int y = coorNew.getY() - i;              
+                if (x == 0 || y == 0) {
+                    break;
+                }
+                int possiblePosition = board.getBoard()[y][x];
+                if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                    break;
+                }
+                if (possiblePosition == 14 || possiblePosition == 15) {
+                    return false;
+                }                    
+            }            
+        }
+        
+        if (piece < 6) {    
+            ChessBoard newBoard = new ChessBoard();
+            newBoard.initBoard();
+            newBoard.setBoard(board);
+            newBoard.movePiece(move);
+            return checkMove(newBoard, board);
+                        
+        }
+   
+        return true;
+    }
+    
+    public boolean checkMove(ChessBoard board, ChessBoard originalBoard) {
+        
+        int xKing = 1;
+        int yKing = 5;
+
+        for (int i = 1; i < 9; i++) {
+            for (int j = i; j < 9; j++) {
+                if (board.getBoard()[i][j] == 6) {
+                    xKing = j;
+                    yKing = i;
+                    break;
+                }
+            }
+        }
+        
+        // Check Pawn attack
+        if (xKing < 8) {
+            if (board.getBoard()[xKing+1][yKing+1] == 11) {
+                return false;
+            }
+        }
+        if (xKing > 0) {
+            if (board.getBoard()[xKing-1][yKing+1] == 11) {
+                return false;
+            }
+        }
+        
+        // check Rook and queen Rook attack right
+        for (int i = xKing+1; i < 9; i++) {
+            int possiblePosition = board.getBoard()[yKing][i];
+            if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 12 || possiblePosition == 15) {
+                return false;
+            }            
+        }
+        
+        // check Rook and queen Rook attack left
+        for (int i = xKing+1; i > 0; i--) {
+            int possiblePosition = board.getBoard()[yKing][i];
+            if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 12 || possiblePosition == 15) {
+                return false;
+            }            
+        }
+
+        // check Rook and queen Rook attack up
+        for (int i = yKing+1; i < 9; i++) {
+            int possiblePosition = board.getBoard()[i][xKing];
+            if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 12 || possiblePosition == 15) {
+                return false;
+            }            
+        }        
+        
+        // check Rook and queen Rook attack down
+        for (int i = yKing+1; i > 0; i--) {
+            int possiblePosition = board.getBoard()[i][xKing];
+            if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 12 || possiblePosition == 15) {
+                return false;
+            }            
+        }
+        
+        return true;
     }
 
     
