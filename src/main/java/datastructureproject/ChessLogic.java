@@ -526,7 +526,7 @@ public class ChessLogic {
         Coordinate coorNew = move.getNewCoordinate();
         int piece = board.getBoard()[coorOld.getY()][coorOld.getX()];
         
-        if (piece == 6) {
+        if (piece == 30) {
             
             // Check Pawn attack x+1
             if (coorNew.getX() < 8) {
@@ -594,7 +594,7 @@ public class ChessLogic {
             }
             
             // Check knight attact y-1 x-2
-            if (coorOld.getY() > 1 && coorOld.getX() > 6) {
+            if (coorOld.getY() > 1 && coorOld.getX() > 2) {
                 if (board.getBoard()[coorNew.getY()-1][coorNew.getX()-2] == 13) {
                     return false;
                 }
@@ -714,7 +714,7 @@ public class ChessLogic {
             }            
         }
         
-        if (piece < 6) {    
+        if (piece < 10) {    
             ChessBoard newBoard = new ChessBoard();
             newBoard.initBoard();
             newBoard.setBoard(board);
@@ -743,12 +743,12 @@ public class ChessLogic {
         
         // Check Pawn attack
         if (xKing < 8) {
-            if (board.getBoard()[xKing+1][yKing+1] == 11) {
+            if (board.getBoard()[yKing+1][xKing+1] == 11) {
                 return false;
             }
         }
         if (xKing > 0) {
-            if (board.getBoard()[xKing-1][yKing+1] == 11) {
+            if (board.getBoard()[yKing-1][xKing+1] == 11) {
                 return false;
             }
         }
@@ -796,6 +796,127 @@ public class ChessLogic {
                 return false;
             }            
         }
+        
+        // check Knight attact y+2 x+1
+        if (yKing < 6 && xKing < 7) {
+            if (board.getBoard()[yKing + 2][xKing + 1] == 13) {
+                return false;
+            }
+        }
+        
+        // check Knight attact y+2 x-1
+        if (yKing < 6 && xKing > 1) {
+            if (board.getBoard()[yKing + 2][xKing - 1] == 13) {
+                return false;
+            }
+        }
+
+        // check Knight attact y-2 x+1
+        if (yKing > 2 && xKing < 7) {
+            if (board.getBoard()[yKing - 2][xKing + 1] == 13) {
+                return false;
+            }
+        }        
+
+        // check Knight attact y-2 x-1
+        if (yKing > 2 && xKing > 1) {
+            if (board.getBoard()[yKing - 2][xKing - 1] == 13) {
+                return false;
+            }
+        }        
+
+        // check Knight attact y+1 x+2
+        if (yKing < 7 && xKing < 6) {
+            if (board.getBoard()[yKing + 1][xKing + 2] == 13) {
+                return false;
+            }
+        }
+
+        // check Knight attact y-1 x+2
+        if (yKing > 1 && xKing < 6) {
+            if (board.getBoard()[yKing - 1][xKing + 2] == 13) {
+                return false;
+            }
+        }
+
+
+        // check Knight attact y+1 x-2
+        if (yKing < 7 && xKing > 2) {
+            if (board.getBoard()[yKing + 1][xKing - 2] == 13) {
+                return false;
+            }
+        }
+
+        // check Knight attact y-1 x-2
+        if (yKing > 1 && xKing > 2) {
+            if (board.getBoard()[yKing - 1][xKing - 2] == 13) {
+                return false;
+            }
+        }
+        
+        // check bishop and quuen bishop attack right-up
+        for (int i = 1; i < 8; i++) {
+            int x = xKing + i;
+            int y = yKing + i;  
+            if (x == 9 || y == 9) {
+                break;
+            }
+            int possiblePosition = board.getBoard()[y][x];
+            if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 14 || possiblePosition == 15) {
+                return false;
+            }                    
+        }
+                    
+        // check bishop and quuen bishop attack right-down
+        for (int i = 1; i < 8; i++) {
+            int x = xKing + i;
+            int y = yKing - i;              
+            if (x == 9 || y == 0) {
+                break;
+            }
+            int possiblePosition = board.getBoard()[y][x];
+            if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 14 || possiblePosition == 15) {
+                return false;
+            }                    
+        }
+
+        // check bishop and quuen bishop attack left-up
+        for (int i = 1; i < 8; i++) {
+            int x = xKing - i;
+            int y = yKing + i;              
+            if (x == 0 || y == 9) {
+                break;
+            }
+            int possiblePosition = board.getBoard()[y][x];
+            if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 14 || possiblePosition == 15) {
+                return false;
+            }                    
+        } 
+        
+        // check bishop and quuen bishop attack left-down
+        for (int i = 1; i < 8; i++) {
+            int x = xKing - i;
+            int y = yKing - i;              
+            if (x == 0 || y == 0) {
+                break;
+            }
+            int possiblePosition = board.getBoard()[y][x];
+            if (possiblePosition != 0 && possiblePosition != 14 && possiblePosition != 15) {
+                break;
+            }
+            if (possiblePosition == 14 || possiblePosition == 15) {
+                return false;
+            }                    
+        } 
         
         return true;
     }
