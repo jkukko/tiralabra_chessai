@@ -98,7 +98,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX(), coor.getY() + 2);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }
                 }                           
             }
             
@@ -119,7 +121,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX()+2, coor.getY() + 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                   
                 }
             }
                         
@@ -129,7 +133,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() + 2);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                  
                 }
             }
 
@@ -139,7 +145,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() + 1, coor.getY() - 2);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                    
                 }
             }            
 
@@ -149,7 +157,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() + 2, coor.getY() - 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                   
                 }
             }            
 
@@ -161,7 +171,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 2, coor.getY() + 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                   
                 }
             }
                         
@@ -171,7 +183,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() + 2);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                    
                 }
             }
 
@@ -181,7 +195,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 1, coor.getY() - 2);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                  
                 }
             }            
 
@@ -191,7 +207,9 @@ public class ChessLogic {
                     Coordinate newCoordinate = new Coordinate(coor.getX() - 2, coor.getY() - 1);
                     Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                     Move move = new Move(oldCoordinate, newCoordinate);
-                    moves.add(move);                    
+                    if (checkMate(move, board)) {
+                        moves.add(move);
+                    }                   
                 }
             }                       
        
@@ -219,7 +237,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX(), i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
                 
                 if (earlier >= 11) {
                     break;
@@ -237,7 +257,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(coor.getX(), i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
                 
                 if (earlier >= 11) {
                     break;
@@ -256,7 +278,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(i, coor.getY());
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -275,7 +299,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(i, coor.getY());
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -305,7 +331,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(xCoor, i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -332,7 +360,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(xCoor, i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -357,7 +387,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(xCoor, i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -382,7 +414,9 @@ public class ChessLogic {
                 Coordinate newCoordinate = new Coordinate(xCoor, i);
                 Coordinate oldCoordinate = new Coordinate(coor.getX(), coor.getY());
                 Move move = new Move(oldCoordinate, newCoordinate);
-                moves.add(move);
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
                 if (earlier >= 11) {
                     break;
@@ -526,7 +560,7 @@ public class ChessLogic {
         Coordinate coorNew = move.getNewCoordinate();
         int piece = board.getBoard()[coorOld.getY()][coorOld.getX()];
         
-        if (piece == 30) {
+        if (piece == 6) {
             
             // Check Pawn attack x+1
             if (coorNew.getX() < 8) {

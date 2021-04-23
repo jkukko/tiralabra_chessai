@@ -5,6 +5,9 @@
  */
 package datastructureproject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kukkojoo
@@ -108,6 +111,24 @@ public class ChessBoard {
             }
             
         }
+    }
+    
+    public List<Integer> getScore(Side side) {
+        int score = 0;
+
+        if (side == Side.WHITE) {
+            return whiteScore();
+        } else {
+            return blackScore();
+        }     
+    }
+
+    private List<Integer> whiteScore() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private List<Integer> blackScore() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
