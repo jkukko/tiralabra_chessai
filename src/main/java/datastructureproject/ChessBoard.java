@@ -131,4 +131,22 @@ public class ChessBoard {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public Coordinate kingLocation(int player) {
+        for (int i = 1; i < 9; i++) {
+            for (int j = 1; j < 9; j++) {
+                
+                if(player == 1 && this.board[i][j] == 6) {
+                    return new Coordinate(i, j);
+                }
+                
+                if (player == 2 && this.board[i][j] == 16) {
+
+                    return new Coordinate(j, i);
+                    
+                }
+            }
+        }
+        return new Coordinate(1,1);
+    }
+    
 }
