@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package datastructureproject;
-
-import datastructureproject.Move;
-import datastructureproject.ChessBoard;
+import datastructureproject.Logic.ChessLogicWhite;
+import datastructureproject.Logic.ChessLogicBlack;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +17,15 @@ public class ChessLogic {
     
     
     public List<Move> legalMoves(ChessBoard board, int player) {
-        List<Move> moves = new ArrayList<>();
         
+        if (player == 1) {
+            ChessLogicWhite w = new ChessLogicWhite();
+            return w.legalMoves(board);
+        } else {
+            ChessLogicBlack b = new ChessLogicBlack();
+            return b.legalMoves(board);
+        }
+/*        
         for (int i = 1; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
                 List<Move> possibleMoves = new ArrayList<>();
@@ -43,6 +49,7 @@ public class ChessLogic {
         }
         
         return moves;
+*/
     }
    
     public List<Move> checkPawnMoves(Coordinate coor, ChessBoard board, int player) {

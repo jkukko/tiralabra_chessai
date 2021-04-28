@@ -12,6 +12,7 @@ package chess;
 
 import datastructureproject.GameBot;
 import datastructureproject.Logic.ChessLogicBlack;
+import datastructureproject.Logic.ChessLogicWhite;
 import chess.engine.GameState;
 import chess.bot.ChessBot;
 import chess.bot.TestBot;
@@ -50,15 +51,16 @@ public class TestInterface {
         board.initBoard(); 
         ChessLogic logic = new ChessLogic();
         ChessLogicBlack logicBlack = new ChessLogicBlack();
+        ChessLogicWhite logicWhite = new ChessLogicWhite();
         GameBot gb = new GameBot();
             
         String x = "joo";
         while (true) {
             List<Move> moves = new ArrayList<>();
-            printMoves(logic.legalMoves(board, 1));
-            board.printBoard();
+            printMoves(logicWhite.legalMoves(board));
             System.out.println("BLACK MOVES:");
             printMoves(logicBlack.legalMoves(board));
+            board.printBoard();
             System.out.println("Give you move:");
             String m = reader.nextLine();
             
