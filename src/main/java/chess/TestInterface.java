@@ -59,7 +59,7 @@ public class TestInterface {
             List<Move> moves = new ArrayList<>();
             printMoves(logicWhite.legalMoves(board));
             System.out.println("BLACK MOVES:");
-            printMoves(logicBlack.legalMoves(board));
+            //printMoves(logicBlack.legalMoves(board));
             board.printBoard();
             System.out.println("Give you move:");
             String m = reader.nextLine();

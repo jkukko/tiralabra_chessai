@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.Evaluation;
+
 import datastructureproject.ChessBoard;
-import datastructureproject.Move;
+
 /**
  *
  * @author kukkojoo
  */
-public class Evaluation {
+public interface BoardEvaluation {
     
+    int evalueation(ChessBoard board, int player);  
 }
