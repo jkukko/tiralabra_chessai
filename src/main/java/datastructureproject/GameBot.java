@@ -40,6 +40,7 @@ public class GameBot implements ChessBot {
 
     @Override
     public String nextMove(GameState gamestate) {
+        
         try {
             String move = gamestate.getLatestMove();
             if (move != null) {
@@ -64,8 +65,16 @@ public class GameBot implements ChessBot {
     
     public Move getMove() throws Exception {
         List<Move> moves = new ArrayList<>();
+        
         moves = this.logic.legalMoves(this.board, 1);
         TimeUnit.SECONDS.sleep(1);
+        Move mv = moves.get(this.random.nextInt(moves.size()));
+        return mv;
+    }
+
+    public Move getMoveByPlayer(int player) {
+        List<Move> moves = new ArrayList<>();
+        moves = this.logic.legalMoves(this.board, player);
         Move mv = moves.get(this.random.nextInt(moves.size()));
         return mv;
     }
