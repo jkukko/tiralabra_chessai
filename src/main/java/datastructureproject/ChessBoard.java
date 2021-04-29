@@ -22,6 +22,16 @@ public class ChessBoard {
     public ChessBoard(ChessBoard board) {
         this.board = board.getBoard();
     }
+    
+    public ChessBoard(int[][] table) {
+        this.board = new int[9][9];
+        
+        for (int i = 1; i < 9; i++) {
+            for (int j = 1; j < 9; j++) {
+                this.board[i][j] = table[i][j];
+            }
+        }
+    }
 
     public int[][] getBoard() {
         return this.board;
@@ -64,6 +74,12 @@ public class ChessBoard {
     public void movePiece(Move move) {
         this.board[move.getNewY()][move.getNewX()] = this.board[move.getOldY()][move.getOldX()];
         this.board[move.getOldY()][move.getOldX()] = 0;
+    }
+    
+    public int movePieceAndGetNewPositionValue(Move move) {
+        int value = this.board[move.getNewY()][move.getNewX()];
+        movePiece(move);
+        return value;
     }
     
     public void printBoard() {
@@ -147,6 +163,18 @@ public class ChessBoard {
             }
         }
         return new Coordinate(1,1);
+    }
+
+    public void undoMove(Move move) {
+        Move undoMove = new Move(move.getNewCoordinate(), move.getOldCoordinate());
+        movePiece(undoMove);
+    }
+    
+    public void undoMoveWithOldValue(Move move, int oldValue) {
+        Coordinate coorOld = move.getOldCoordinate();
+        Coordinate coorNew = move.getNewCoordinate();
+        this.board[coorOld.getY()][coorOld.getX()] = this.board[coorNew.getY()][coorNew.getX()];
+        this.board[coorNew.getY()][coorNew.getX()] = oldValue;
     }
     
 }
