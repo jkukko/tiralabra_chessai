@@ -80,7 +80,7 @@ public class ChessLogicBlack {
             }                
         }        
         
-        if (coor.getY() == 7) {
+        if (coor.getY() == 7 && board.getBoard()[coor.getY()-1][coor.getX()] == 0) {
             if (board.getBoard()[coor.getY() - 2][coor.getX()] == 0 && board.getBoard()[coor.getY() - 1][coor.getX()] == 0) {
                 Move move = new Move(coor, new Coordinate(coor.getX(), coor.getY() - 2));
                 if (checkMate(move, board)) {

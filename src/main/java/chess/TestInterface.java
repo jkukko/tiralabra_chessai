@@ -53,7 +53,7 @@ public class TestInterface {
         ChessLogicBlack logicBlack = new ChessLogicBlack();
         ChessLogicWhite logicWhite = new ChessLogicWhite();
         GameBot gb = new GameBot();
-            
+/*            
         String x = "joo";
         while (true) {
             List<Move> moves = new ArrayList<>();
@@ -74,6 +74,32 @@ public class TestInterface {
             //moves = logic.checkPawnMoves(mv.getNewCoordinate(), board);
             //printMoves(moves);
             System.out.println("--------");
+        }
+*/      GameState gs = new GameState();
+        int player = 1;
+        while (true) {
+            
+            Move move = null;
+            
+            if (player == 2) {
+                System.out.println("White moves: ");
+                List<Move> moves = logic.legalMoves(board, player);
+                printMoves(moves);
+                board.printBoard();
+                System.out.println("Give you move:");
+                String m = reader.nextLine();
+                move = new Move(m);
+                board.movePiece(move);
+                board.printBoard();
+                player = 1;
+            } else {                
+                move = new Move(gb.nextMove(gs));
+                move.printMove();
+                board.movePiece(move);
+                player = 2;
+            }
+            
+            
         }
 
     }
