@@ -50,4 +50,8 @@ public class Move {
     public String getMove() {
         return this.oldCoordinate.getCoordinate() + this.newCoordinate.getCoordinate();
     }
+    
+    public void printMove() {
+        System.out.println(this.oldCoordinate.getCoordinate() + this.newCoordinate.getCoordinate());
+    }
 }
