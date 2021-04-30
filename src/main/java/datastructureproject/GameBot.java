@@ -14,6 +14,7 @@ import chess.bot.ChessBot;
 import chess.engine.GameState;
 import datastructureproject.ChessLogic;
 import datastructureproject.ChessBoard;
+import datastructureproject.Evaluation.MiniMax;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -53,7 +54,9 @@ public class GameBot implements ChessBot {
         
         Move myMove;
         try {
-            myMove = this.getMove();
+            //myMove = this.getMove(); Testin Minimax
+            MiniMax mm = new MiniMax(board);
+            myMove = mm.getBestMove(board, 2, 1);
             this.board.movePiece(myMove);
             
             return myMove.getMove();
