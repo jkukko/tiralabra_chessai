@@ -49,3 +49,5 @@
 * documents
 * if time, I want to make better board evaluation
 * if time, I want to order my leagal moves
+
+Time estimate: 15 hours
