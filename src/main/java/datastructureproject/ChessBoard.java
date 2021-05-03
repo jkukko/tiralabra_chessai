@@ -77,8 +77,8 @@ public class ChessBoard {
     }
     
     public int movePieceAndGetNewPositionValue(Move move) {
-        int value = this.board[move.getNewY()][move.getNewX()];
         movePiece(move);
+        int value = this.board[move.getNewY()][move.getNewX()];
         return value;
     }
     
@@ -152,7 +152,7 @@ public class ChessBoard {
             for (int j = 1; j < 9; j++) {
                 
                 if(player == 1 && this.board[i][j] == 6) {
-                    return new Coordinate(i, j);
+                    return new Coordinate(j, i);
                 }
                 
                 if (player == 2 && this.board[i][j] == 16) {

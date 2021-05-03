@@ -43,7 +43,7 @@ public class ChessLogicWhite {
         return moves;
     }    
 
-    private List<Move> checkPawnMoves(Coordinate coor, ChessBoard board) {
+    public List<Move> checkPawnMoves(Coordinate coor, ChessBoard board) {
         List<Move> moves = new ArrayList<>();
 
         if ((coor.getY() == 8)) {
@@ -93,7 +93,7 @@ public class ChessLogicWhite {
         return moves;
     }
 
-    private List<Move> checkRookMoves(Coordinate coor, ChessBoard board) {
+    public List<Move> checkRookMoves(Coordinate coor, ChessBoard board) {
         List<Move> moves = new ArrayList<>();
         
         int earlier = 0;
@@ -172,7 +172,7 @@ public class ChessLogicWhite {
         return moves;
     }
 
-    private List<Move> checkKnightMoves(Coordinate coor, ChessBoard board) {
+    public List<Move> checkKnightMoves(Coordinate coor, ChessBoard board) {
         List<Move> moves = new ArrayList<>();
          
         if ((coor.getX() + 2 < 9) && (coor.getY() + 1 < 9)) {
@@ -258,7 +258,7 @@ public class ChessLogicWhite {
         return moves;
     }
 
-    private List<Move> checkBishopMoves(Coordinate coor, ChessBoard board) {
+    public List<Move> checkBishopMoves(Coordinate coor, ChessBoard board) {
         List<Move> moves = new ArrayList<>();
          
         int earlier = 0;
@@ -480,12 +480,12 @@ public class ChessLogicWhite {
 
         // Check Pawn attack
         if (xKing < 8) {
-            if (chessBoardNew.getBoard()[yKing+1][xKing+1] == 1) {
+            if (chessBoardNew.getBoard()[yKing+1][xKing+1] == 11) {
                 return false;
             }
         }
         if (xKing > 0) {
-            if (chessBoardNew.getBoard()[yKing+1][xKing-1] == 1) {
+            if (chessBoardNew.getBoard()[yKing+1][xKing-1] == 11) {
                 return false;
             }
         }        
@@ -502,7 +502,7 @@ public class ChessLogicWhite {
         }
 
         // check Rook and queen Rook attack left
-        for (int i = xKing+1; i > 0; i--) {
+        for (int i = xKing-1; i > 0; i--) {
             int possiblePosition = board.getBoard()[yKing][i];
             if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
                 break;

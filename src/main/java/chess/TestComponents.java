@@ -11,6 +11,7 @@ import datastructureproject.ChessBoard;
 import datastructureproject.Coordinate;
 import datastructureproject.Move;
 import chess.engine.GameState;
+import datastructureproject.Logic.ChessLogicWhite;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +51,24 @@ public class TestComponents {
         
         
         gamebot.nextMove(gs);
+        
+        int[][] table3 = 
+        {
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 6},
+            { 0, 0,11, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0,11, 0, 0, 0},
+            { 0, 0, 0, 0, 4, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0,11, 0, 0, 0},
+            { 0, 0,11, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+
+        ChessBoard board2 = new ChessBoard(table3);
+        ChessLogicWhite whiteLogic = new ChessLogicWhite();
+        
+        System.out.println(whiteLogic.checkBishopMoves(new Coordinate("d4"), board2).size());
         
     }
     
