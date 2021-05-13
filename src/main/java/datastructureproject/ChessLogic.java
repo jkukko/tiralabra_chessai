@@ -8,6 +8,7 @@ import datastructureproject.Logic.ChessLogicWhite;
 import datastructureproject.Logic.ChessLogicBlack;
 import java.util.ArrayList;
 import java.util.List;
+import datastructureproject.OwnStructures.OwnList;
 
 /**
  *
@@ -15,8 +16,14 @@ import java.util.List;
  */
 public class ChessLogic {
     
+    /**
+     * Returns a list of legal moves in certain chessboard and for specific player
+     * @param board a chessboard
+     * @param player a player
+     * @return list of legal moves
+     */
     
-    public List<Move> legalMoves(ChessBoard board, int player) {
+    public OwnList legalMoves(ChessBoard board, int player) {
         
         if (player == 1) {
             ChessLogicWhite w = new ChessLogicWhite();
