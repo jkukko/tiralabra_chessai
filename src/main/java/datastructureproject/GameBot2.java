@@ -10,6 +10,7 @@ import chess.bot.ChessBot;
 import datastructureproject.ChessBoard;
 import datastructureproject.Move;
 import datastructureproject.Evaluation.MiniMax;
+import datastructureproject.Evaluation.MiniMaxAlphaBeta;
 import chess.engine.GameState;
 /**
  *
@@ -30,8 +31,9 @@ public class GameBot2 implements ChessBot {
         Move myMove;
         try {
             //myMove = this.getMove(); Testin Minimax
-            MiniMax mm = new MiniMax(board);
-            myMove = mm.getBestMove(board, 3, 1);
+            MiniMaxAlphaBeta mmAB = new MiniMaxAlphaBeta(board);
+            //MiniMax mm = new MiniMax(board);
+            myMove = mmAB.getBestMove(board, 4, 1);
             this.board.movePiece(myMove);
             
             return myMove.getMove();
