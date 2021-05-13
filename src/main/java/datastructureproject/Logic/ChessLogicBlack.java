@@ -10,6 +10,7 @@ import datastructureproject.Coordinate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import datastructureproject.OwnStructures.OwnList;
 
 /**
  *
@@ -17,8 +18,14 @@ import java.util.List;
  */
 public class ChessLogicBlack {
     
-    public List<Move> legalMoves(ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    /**
+     * Returns a list of legal moves
+     * @param board a specific chessboard
+     * @return list of legal moves
+     */    
+    
+    public OwnList legalMoves(ChessBoard board) {
+        OwnList moves = new OwnList();
         
         for (int i = 8; i > 0; i--) {
             for (int j = 8; j > 0; j--) {
@@ -43,8 +50,15 @@ public class ChessLogicBlack {
         return moves;
     }
 
-    private List<Move> checkPawnMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    /**
+     * Returns lis of legal moves for pawn piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */    
+    
+    public OwnList checkPawnMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
 
         if (coor.getY() == 0) {
             return moves;
@@ -90,10 +104,17 @@ public class ChessLogicBlack {
         }
         
         return moves;
-    }
+    } 
 
-    private List<Move> checkRookMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    /**
+     * Returns lis of legal moves for rook piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */
+    
+    public OwnList checkRookMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
         int earlier = 0;
         
         // Rook moves downwards
@@ -174,9 +195,16 @@ public class ChessLogicBlack {
 
         return moves;
     }
+   
+    /**
+     * Returns lis of legal moves for knight piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */ 
     
-    private List<Move> checkKnightMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    public OwnList checkKnightMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
 
         if ((coor.getX() + 2 < 9) && (coor.getY() + 1 < 9)) {
             int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX() + 2];
@@ -260,11 +288,16 @@ public class ChessLogicBlack {
         
         return moves;
     }
+
+    /**
+     * Returns lis of legal moves for bishop piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */
     
-    
-    
-    private List<Move> checkBishopMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    public OwnList checkBishopMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
         
         int earlier = 0;
         int xCoor = coor.getX() + 1;
@@ -368,9 +401,16 @@ public class ChessLogicBlack {
 
         return moves;
     }
+
+    /**
+     * Returns lis of legal moves for queen piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */ 
     
-    private List<Move> checkQueenMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    public OwnList checkQueenMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
         
         moves.addAll(checkBishopMoves(coor, board));
         moves.addAll(checkRookMoves(coor, board));
@@ -378,8 +418,15 @@ public class ChessLogicBlack {
         return moves;
     }
 
-    private List<Move> checkKingMoves(Coordinate coor, ChessBoard board) {
-        List<Move> moves = new ArrayList<>();
+    /**
+     * Returns lis of legal moves for king piece in specific coordination on board
+     * @param coor specific coordination
+     * @param board specific chessboard
+     * @return list of legal moves
+     */     
+    
+    public OwnList checkKingMoves(Coordinate coor, ChessBoard board) {
+        OwnList moves = new OwnList();
         
         if (coor.getY() < 8) {
             int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX()];
@@ -466,6 +513,13 @@ public class ChessLogicBlack {
         return moves;
     }    
 
+    /**
+     * Returns boolean value if possible move would cause own king to be check mated
+     * @param move possible move
+     * @param board chessboard current situation
+     * @return boolean value
+     */    
+    
     private boolean checkMate(Move move, ChessBoard board) {
         ChessBoard chessBoardNew = new ChessBoard();
         chessBoardNew.initBoard();
