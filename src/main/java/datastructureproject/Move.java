@@ -23,33 +23,72 @@ public class Move {
         this.newCoordinate = newCoordinate;
     }
     
+    /**
+     * Returns old x coordinate as an Integer
+     * @return x coordinate as an Integer
+     */
+    
     public int getOldX() {
         return this.oldCoordinate.getX();
     }
+    
+    /**
+     * Returns old y coordinate as an Integer
+     * @return y coordinate as an Integer
+     */
 
     public int getOldY() {
         return this.oldCoordinate.getY();
     }    
+    
+    /**
+     * Returns new x coordinate as an Integer
+     * @return x coordinate as an Integer
+     */
 
     public int getNewX() {
         return this.newCoordinate.getX();
     }
+    
+    /**
+     * Returns new y coordinate as an Integer
+     * @return y coordinate as an Integer
+     */
 
     public int getNewY() {
         return this.newCoordinate.getY();
     }
     
+    /**
+     * Returns old coordinate
+     * @return old coordinate
+     */
+    
     public Coordinate getOldCoordinate() {
         return this.oldCoordinate;
     }
+    
+    /**
+     * Returns new coordinate
+     * @return new coordinate
+     */
     
     public Coordinate getNewCoordinate() {
         return this.newCoordinate;
     }
     
+    /**
+     * Returns move as String
+     * @return move
+     */
+    
     public String getMove() {
         return this.oldCoordinate.getCoordinate() + this.newCoordinate.getCoordinate();
     }
+    
+    /**
+     * Prints move
+     */
     
     public void printMove() {
         System.out.println(this.oldCoordinate.getCoordinate() + this.newCoordinate.getCoordinate());

@@ -32,10 +32,19 @@ public class ChessBoard {
             }
         }
     }
+    
+    /**
+     * Returns the chessboard which is two dimension table
+     * @return two dimension table of Integers
+     */
 
     public int[][] getBoard() {
         return this.board;
     }
+    
+    /**
+     * Initializing the chessboard
+     */
     
     public void initBoard() {
         for (int i = 1; i < 9; i++) {
@@ -71,16 +80,28 @@ public class ChessBoard {
         }
     }
     
+    /**
+     * Moves a piece in chessboard
+     * @param move a move
+     */
     public void movePiece(Move move) {
         this.board[move.getNewY()][move.getNewX()] = this.board[move.getOldY()][move.getOldX()];
         this.board[move.getOldY()][move.getOldX()] = 0;
     }
-    
+    /**
+     * Move a piece in chessboard and returns new position value before move
+     * @param move a move
+     * @return new position before move
+     */
     public int movePieceAndGetNewPositionValue(Move move) {
-        movePiece(move);
         int value = this.board[move.getNewY()][move.getNewX()];
+        movePiece(move);
         return value;
     }
+    
+    /**
+     * Prints chessboard
+     */
     
     public void printBoard() {
         for (int i = 1; i < 9; i++) {
@@ -119,6 +140,11 @@ public class ChessBoard {
         }
     }
     
+    /**
+     * Initializing chessboard with other board
+     * @param initBoard a chessboard to create same
+     */
+    
     public void setBoard(ChessBoard initBoard) {
         
         for (int i = 1; i < 9; i++) {
@@ -129,23 +155,11 @@ public class ChessBoard {
         }
     }
     
-    public List<Integer> getScore(Side side) {
-        int score = 0;
-
-        if (side == Side.WHITE) {
-            return whiteScore();
-        } else {
-            return blackScore();
-        }     
-    }
-
-    private List<Integer> whiteScore() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private List<Integer> blackScore() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    /**
+     * Returns king position of specific player
+     * @param player a player
+     * @return coordinate where king is
+     */
     
     public Coordinate kingLocation(int player) {
         for (int i = 1; i < 9; i++) {
@@ -164,11 +178,22 @@ public class ChessBoard {
         }
         return new Coordinate(1,1);
     }
+    
+    /**
+     * Undos a move 
+     * @param move that is will be undo
+     */
 
     public void undoMove(Move move) {
         Move undoMove = new Move(move.getNewCoordinate(), move.getOldCoordinate());
         movePiece(undoMove);
     }
+    
+    /**
+     * Undo a move and set old value as given old value
+     * @param move a move
+     * @param oldValue old value that will be set
+     */
     
     public void undoMoveWithOldValue(Move move, int oldValue) {
         Coordinate coorOld = move.getOldCoordinate();

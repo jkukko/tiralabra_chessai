@@ -57,9 +57,19 @@ public class Coordinate {
         
     }
     
+    /**
+     * Returns a coordinate as a string
+     * @return coordinate as a String
+     */
+    
     public String getCoordinate() {
         return this.coordinate;
     }
+    
+    /**
+     * Returns xcoordinate as an Integer in chessboard table
+     * @return xcoordinate as an Integer
+     */
     
     public int getX() {
         String character = this.coordinate.substring(0,1);
@@ -88,6 +98,11 @@ public class Coordinate {
         }           
         return 8;
     }
+
+    /**
+     * Returns a ycoordinate as an Integer
+     * @return ycoordinate as an Integer
+     */
     
     public int getY() {
         return Integer.parseInt(this.coordinate.substring(1));
