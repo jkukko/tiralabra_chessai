@@ -20,17 +20,18 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+import datastructureproject.OwnStructures.OwnList;
 
 public class GameBot implements ChessBot {
     private ChessBoard board;
-    private List<Move> movesList;
+    private OwnList movesList;
     private ChessLogic logic;
     private Random random; 
     
     public GameBot() {
         this.board = new ChessBoard();
         this.board.initBoard();
-        this.movesList = new ArrayList<>();
+        this.movesList = new OwnList();
         this.logic = new ChessLogic();
         this.random = new Random();
     }
@@ -67,18 +68,18 @@ public class GameBot implements ChessBot {
     }
     
     public Move getMove() throws Exception {
-        List<Move> moves = new ArrayList<>();
+        OwnList moves = new OwnList();
         
         moves = this.logic.legalMoves(this.board, 1);
         TimeUnit.SECONDS.sleep(1);
-        Move mv = moves.get(this.random.nextInt(moves.size()));
+        Move mv = (Move) moves.get(this.random.nextInt(moves.size()));
         return mv;
     }
 
     public Move getMoveByPlayer(int player) {
-        List<Move> moves = new ArrayList<>();
+        OwnList moves = new OwnList();
         moves = this.logic.legalMoves(this.board, player);
-        Move mv = moves.get(this.random.nextInt(moves.size()));
+        Move mv = (Move) moves.get(this.random.nextInt(moves.size()));
         return mv;
     }
     

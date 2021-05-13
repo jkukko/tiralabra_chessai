@@ -31,7 +31,7 @@ public class GameBot2 implements ChessBot {
         try {
             //myMove = this.getMove(); Testin Minimax
             MiniMax mm = new MiniMax(board);
-            myMove = mm.getBestMove(board, 2, 1);
+            myMove = mm.getBestMove(board, 3, 1);
             this.board.movePiece(myMove);
             
             return myMove.getMove();
