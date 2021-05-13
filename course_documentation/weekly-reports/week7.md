@@ -26,4 +26,7 @@
 
 13.5.2021 afternoon-evening
 * javadoc
-* time estimate 1,5 hours
+* gamelogic has flas --> bug fixes
+* minimax works --> 6 depth --> ~ 200 000 000 possible positions evaluated
+* minimaxalphabesta
+* time estimate 5 hours
