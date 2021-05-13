@@ -11,9 +11,11 @@ import datastructureproject.ChessBoard;
 import datastructureproject.Coordinate;
 import datastructureproject.Move;
 import chess.engine.GameState;
+import datastructureproject.Evaluation.SimpleBoardEvaluation;
 import datastructureproject.Logic.ChessLogicWhite;
 import java.util.ArrayList;
 import java.util.List;
+import datastructureproject.OwnStructures.OwnList;
 
 /**
  *
@@ -55,12 +57,12 @@ public class TestComponents {
         int[][] table3 = 
         {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0},
-            { 0, 0, 0, 0, 0, 0, 0, 0, 6},
-            { 0, 0,11, 0, 0, 0, 0, 0, 0},
-            { 0, 0, 0, 0, 0,11, 0, 0, 0},
-            { 0, 0, 0, 0, 4, 0, 0, 0, 0},
-            { 0, 0, 0, 0, 0,11, 0, 0, 0},
-            { 0, 0,11, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 5, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            { 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 0, 0, 0, 0, 0, 0, 0, 0}
         };
@@ -68,7 +70,25 @@ public class TestComponents {
         ChessBoard board2 = new ChessBoard(table3);
         ChessLogicWhite whiteLogic = new ChessLogicWhite();
         
-        System.out.println(whiteLogic.checkBishopMoves(new Coordinate("d4"), board2).size());
+        System.out.println(whiteLogic.checkQueenMoves(new Coordinate("d4"), board2).size()); 
+        
+        ChessBoard board3 = new ChessBoard();
+        board3.initBoard();
+        System.out.println("MOVES " + whiteLogic.legalMoves(board3).size());
+        
+        OwnList ownList = new OwnList();
+        List<String> moveList = new ArrayList<>();
+        
+        for (int i = 0; i < 20; i++) {
+            String moveText = "a" + i;
+            ownList.add(moveText);
+            moveList.add(moveText);
+        }
+        
+        SimpleBoardEvaluation evaluation = new SimpleBoardEvaluation();
+         
+        System.out.println(evaluation.evalueation(board, 1));
+        
         
     }
     

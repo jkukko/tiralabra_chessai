@@ -23,9 +23,9 @@ public class TestMinMax {
             {0, 0, 1, 1, 1, 1, 1, 1, 1},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 1, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 11, 0, 0, 0, 0, 0, 0},
+            {0, 0,11, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0,11,0,11,11,11,11,11,11},
+            {0,11, 0,11,11,11,11,11,11},
             {0,12,13,14,15,16,14,13,12},
         };  
         ChessBoard board = new ChessBoard(table);
@@ -33,7 +33,7 @@ public class TestMinMax {
         
         MiniMax mm = new MiniMax(board);
         
-        Move m = mm.getBestMove(board, 3, 1);
+        Move m = mm.getBestMove(board, 4, 1);
         m.printMove();
         System.out.println(m.getNewCoordinate().getX() + " " + m.getNewCoordinate().getY());
         

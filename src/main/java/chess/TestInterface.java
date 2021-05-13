@@ -20,6 +20,7 @@ import datastructureproject.ChessBoard;
 import datastructureproject.Coordinate;
 import datastructureproject.Move;
 import datastructureproject.ChessLogic;
+import datastructureproject.OwnStructures.OwnList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -83,7 +84,7 @@ public class TestInterface {
             
             if (player == 2) {
                 System.out.println("White moves: ");
-                List<Move> moves = logic.legalMoves(board, player);
+                OwnList moves = logic.legalMoves(board, player);
                 printMoves(moves);
                 board.printBoard();
                 System.out.println("Give you move:");
@@ -104,10 +105,10 @@ public class TestInterface {
 
     }
     
-    public static void printMoves(List<Move> moves) {
+    public static void printMoves(OwnList moves) {
         System.out.println("Possible moves: ");
         for (int i = 0; i < moves.size(); i++) {
-            Move m = moves.get(i);
+            Move m = (Move) moves.get(i);
             System.out.println(m.getOldCoordinate().getCoordinate() + " -> " + m.getNewCoordinate().getCoordinate());
         }
     }
