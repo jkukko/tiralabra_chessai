@@ -21,11 +21,13 @@ public class MiniMax {
     private ChessLogic logic;
     private SimpleBoardEvaluation evaluation;
     private ChessBoard orginalBoard;
+    private int count;
     
     public MiniMax(ChessBoard board) {
         this.logic = new ChessLogic();
         this.evaluation = new SimpleBoardEvaluation();
         this.orginalBoard = board;
+        this.count = 0;
     }
     
     /**
@@ -39,7 +41,7 @@ public class MiniMax {
     public Move getBestMove(ChessBoard board, int depth, int player) {
         OwnList moves = this.logic.legalMoves(board, player);
         ChessBoard testBoard = new ChessBoard();
-        testBoard.initBoard();
+        //testBoard.initBoard();
         testBoard.setBoard(board);
         Move bestMove = null;
         
@@ -74,9 +76,6 @@ public class MiniMax {
         return bestMove;
     }
 
-    private boolean whiteTurn() {
-        return true;
-    }
     
     /**
      * Returns max value of specific chessboard that can be achieved
@@ -88,6 +87,7 @@ public class MiniMax {
     private int max(ChessBoard board, int depth) {
         
         if (depth == 0) {
+            count++;
             return evaluation.evalueation(board, 1);
         }
         
@@ -98,7 +98,7 @@ public class MiniMax {
         for (int i = 0; i < moves.size(); i++) {
             Move move = (Move) moves.get(i);
             //board.movePiece(move);
-            System.out.println(move.getMove());
+            //System.out.println(move.getMove());
             int eaten = board.movePieceAndGetNewPositionValue(move);
             int otherSideScore = min(board, (depth - 1));
             //board.undoMove(move);
@@ -109,7 +109,7 @@ public class MiniMax {
             
         }
         
-        System.out.println(maxValue);
+        //System.out.println(maxValue);
         
         return maxValue;
     }
@@ -124,6 +124,7 @@ public class MiniMax {
     private int min(ChessBoard board, int depth) {
         
         if (depth == 0) {
+            count++;
             return evaluation.evalueation(board, 2);
         }
         
@@ -147,6 +148,8 @@ public class MiniMax {
         return minValue;
     }
     
-    
+    public int getCount() {
+        return this.count;
+    }
     
 }
