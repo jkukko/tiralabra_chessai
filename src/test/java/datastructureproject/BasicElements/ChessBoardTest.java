@@ -119,7 +119,7 @@ public class ChessBoardTest {
     
     @Test
     public void testMovePieceAndGetNewPositionValue() {
-        assertEquals(1, board.movePieceAndGetNewPositionValue(new Move("a2a3")));
+        assertEquals(0, board.movePieceAndGetNewPositionValue(new Move("a2a3")));
     }
     
     
