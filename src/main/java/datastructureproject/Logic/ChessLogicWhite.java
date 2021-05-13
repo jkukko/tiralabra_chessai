@@ -303,6 +303,7 @@ public class ChessLogicWhite {
          
         int earlier = 0;
         int xCoor = coor.getX() + 1;
+        if (xCoor < 9) {
         for (int i = coor.getY() + 1; i < 9; i++) {
             earlier = board.getBoard()[i][xCoor];
 
@@ -324,19 +325,22 @@ public class ChessLogicWhite {
             if (xCoor == 9) {
                break;
             }
+        }            
         }
+
         
         earlier = 0;
-        if (coor.getX() > 1) {
-            xCoor = coor.getX() - 1;
+        xCoor = coor.getX() - 1;
+        if (xCoor > 0) {
+            
             for (int i = coor.getY() + 1; i < 9; i++) {
                 earlier = board.getBoard()[i][xCoor];
-
+                
+                //System.out.println(xCoor + " / " + i);
+                
                 if ((earlier > 0 && earlier < 7)) {
                     break;
                 }
-
-
 
                 Move move = new Move(coor, new Coordinate(xCoor, i));
                 if (checkMate(move, board)) {
@@ -357,53 +361,62 @@ public class ChessLogicWhite {
         
         earlier = 0;
         xCoor = coor.getX() + 1;
-        for (int i = coor.getY() - 1; i > 0; i--) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor < 9) {
+            
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 0 && earlier < 7)) {
-               break;
-            }
+                if ((earlier > 0 && earlier < 7)) {
+                   break;
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            if (earlier >= 11) {
-                break;
-            }
+                if (earlier >= 11) {
+                    break;
+                }
 
-            xCoor +=1;
+                xCoor +=1;
 
-            if (xCoor == 9) {
-               break;
-            }
+                if (xCoor == 9) {
+                   break;
+                }
+            }            
         }
+
 
         earlier = 0;
         xCoor = coor.getX() - 1;
-        for (int i = coor.getY() - 1; i > 0; i--) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor > 0) {
+            
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 0 && earlier < 7)) {
-               break;
+                if ((earlier > 0 && earlier < 7)) {
+                   break;
+                }
+
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
+
+                if (earlier >= 11) {
+                    break;
+                }
+
+                xCoor -=1;
+
+                if (xCoor == 0) {
+                   break;
+                }
             }
-
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
-
-            if (earlier >= 11) {
-                break;
-            }
-
-            xCoor -=1;
-
-            if (xCoor == 0) {
-               break;
-            }
-        }         
+        }
+        
+         
          
         return moves;
     }

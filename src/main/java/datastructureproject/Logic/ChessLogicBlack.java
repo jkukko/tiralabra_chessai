@@ -301,103 +301,114 @@ public class ChessLogicBlack {
         
         int earlier = 0;
         int xCoor = coor.getX() + 1;
-        for (int i = coor.getY() + 1; i < 9; i++) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor < 9) {
+            for (int i = coor.getY() + 1; i < 9; i++) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 10)) {
-               break;
-            }
+                if ((earlier > 10)) {
+                   break;
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            if (earlier > 0 && earlier < 7) {
-                break;
-            }
+                if (earlier > 0 && earlier < 7) {
+                    break;
+                }
 
-            xCoor +=1;
+                xCoor +=1;
 
-            if (xCoor == 9) {
-               break;
-            }
+                if (xCoor == 9) {
+                   break;
+                }
+            }            
         }
+
         
         earlier = 0;
         xCoor = coor.getX() - 1;
-        for (int i = coor.getY() + 1; i < 9; i++) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor > 0) {
+            for (int i = coor.getY() + 1; i < 9; i++) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 10)) {
-                break;
-            }
+                if ((earlier > 10)) {
+                    break;
+                }
+                
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                if (earlier > 0 && earlier < 7) {
+                    break;
+                }
 
-            if (earlier > 0 && earlier < 7) {
-                break;
-            }
+                xCoor -=1;
 
-            xCoor -=1;
-
-            if (xCoor == 0) {
-               break;
-            }
+                if (xCoor == 0) {
+                   break;
+                }
+            }            
         }
         
         earlier = 0;
         xCoor = coor.getX() + 1;
-        for (int i = coor.getY() - 1; i > 0; i--) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor < 9) {
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 10)) {
-               break;
-            }
+                if ((earlier > 10)) {
+                   break;
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            if (earlier > 0 && earlier < 7) {
-                break;
-            }
+                if (earlier > 0 && earlier < 7) {
+                    break;
+                }
 
-            xCoor +=1;
+                xCoor +=1;
 
-            if (xCoor == 9) {
-               break;
-            }
+                if (xCoor == 9) {
+                   break;
+                }
+            }            
         }
+
         
         earlier = 0;
         xCoor = coor.getX() - 1;
-        for (int i = coor.getY() - 1; i > 0; i--) {
-            earlier = board.getBoard()[i][xCoor];
+        if (xCoor > 0) {
+            for (int i = coor.getY() - 1; i > 0; i--) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 10)) {
-               break;
-            }
+                if (xCoor == 0) {
+                   break;
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                if ((earlier > 10)) {
+                   break;
+                }
 
-            if (earlier > 0 && earlier < 7) {
-                break;
-            }
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            xCoor -=1;
+                if (earlier > 0 && earlier < 7) {
+                    break;
+                }
 
-            if (xCoor == 0) {
-               break;
-            }
-        }         
+                xCoor -=1;
+            }            
+        }
+         
 
         return moves;
     }
