@@ -12,6 +12,13 @@ import datastructureproject.ChessBoard;
  * @author kukkojoo
  */
 public class SimpleBoardEvaluation implements BoardEvaluation {
+    
+    /**
+     * Evaluates given chessboard
+     * @param chessBoard a chessboard
+     * @param player a player
+     * @return value of board
+     */
 
     @Override
     public int evalueation(ChessBoard chessBoard, int player) {
@@ -22,24 +29,32 @@ public class SimpleBoardEvaluation implements BoardEvaluation {
             for (int j = 1; j < 9; j++) {
                 int piece = board[i][j];
                 
-                if (piece == 1 || piece == 11) {
+                if (piece == 0) {
+                    continue;
+                }
+                
+                if (piece == 1) {
                     value += 1;
-                } else if (piece == 2 || piece == 12) {
-                    value += 3;
-                } else if (piece == 3 || piece == 13) {
-                    value += 3;
-                } else if (piece == 4 || piece == 14) {
+                } else if (piece == 11) {
+                    value -= 1;
+                } else if (piece == 2 || piece == 3) {
+                    value += 3;          
+                } else if (piece == 12 || piece == 13) {
+                    value -= 3;
+                } else if (piece == 4) {
                     value += 5;
-                } else if (piece == 5 || piece == 15) {
+                } else if (piece == 14) {
+                    value -= 5;
+                } else if (piece == 5) {
                     value += 9;
-                } else if (piece == 6 || piece == 16) {
+                } else if (piece == 15) {
+                    value -= 9;
+                } else if (piece == 6) {
                     value += 90;
+                } else if (piece == 16) {
+                    value -= 90;
                 }
             }
-        }
-        
-        if (player == 2) {
-            value = value * (-1);
         }
         
         return value;
