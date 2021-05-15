@@ -18,6 +18,19 @@ public class OwnList {
         size = 0;
     }
     
+    public OwnList(int sizeOfTable) {
+        data = new Object[sizeOfTable];
+        size = 0;
+    }
+    
+    public void setOwnList(int index, Object value) {
+        data[index] = value;
+    }
+    
+    public Object[] getOwnList() {
+        return data;
+    }
+    
     /**
      * Adds an object to list
      * 
