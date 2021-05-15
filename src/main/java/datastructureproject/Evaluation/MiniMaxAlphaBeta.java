@@ -17,13 +17,13 @@ import datastructureproject.OwnStructures.OwnList;
 public class MiniMaxAlphaBeta {
 
     private ChessLogic logic;
-    private SimpleBoardEvaluation evaluation;
+    private BonusBoardEvaluation evaluation;
     private ChessBoard orginalBoard;
     private int count;
     
     public MiniMaxAlphaBeta(ChessBoard board) {
         this.logic = new ChessLogic();
-        this.evaluation = new SimpleBoardEvaluation();
+        this.evaluation = new BonusBoardEvaluation();
         this.orginalBoard = board;
         this.count = 0;    
     }

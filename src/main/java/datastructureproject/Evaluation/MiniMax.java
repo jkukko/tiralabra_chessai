@@ -19,13 +19,13 @@ import datastructureproject.OwnStructures.OwnList;
 public class MiniMax {
     
     private ChessLogic logic;
-    private SimpleBoardEvaluation evaluation;
+    private BonusBoardEvaluation evaluation;
     private ChessBoard orginalBoard;
     private int count;
     
     public MiniMax(ChessBoard board) {
         this.logic = new ChessLogic();
-        this.evaluation = new SimpleBoardEvaluation();
+        this.evaluation = new BonusBoardEvaluation();
         this.orginalBoard = board;
         this.count = 0;
     }
