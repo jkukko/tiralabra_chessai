@@ -5,6 +5,7 @@
  */
 package datastructureproject;
 
+import datastructureproject.OwnStructures.OwnList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -153,6 +154,48 @@ public class ChessBoard {
             }
             
         }
+    }
+    
+    public OwnList getPieces() {
+        OwnList piecesList = new OwnList(12);
+        for (int i = 0; i < 12; i++) {
+            piecesList.add(0);
+        }
+        
+        for (int i = 1; i < 9; i++) {
+            for (int j = 1; j < 9; j++) {
+                int piece = board[i][j];
+                
+                if (piece == 1) {
+                    piecesList.setOwnList(0, ((Integer) piecesList.get(0) + 1));
+                } else if (piece == 2) {
+                    piecesList.setOwnList(1, ((Integer) piecesList.get(1) + 1));
+                } else if (piece == 3) {
+                    piecesList.setOwnList(2, ((Integer) piecesList.get(2) + 1));
+                } else if (piece == 4) {
+                    piecesList.setOwnList(3, ((Integer) piecesList.get(3) + 1));
+                } else if (piece == 5) {
+                    piecesList.setOwnList(4, ((Integer) piecesList.get(4) + 1));
+                } else if (piece == 6) {
+                    piecesList.setOwnList(5, ((Integer) piecesList.get(5) + 1));
+                } else if (piece == 11) {
+                    piecesList.setOwnList(6, ((Integer) piecesList.get(6) + 1));
+                } else if (piece == 12) {
+                    piecesList.setOwnList(7, ((Integer) piecesList.get(7) + 1));
+                } else if (piece == 13) {
+                    piecesList.setOwnList(8, ((Integer) piecesList.get(8) + 1));
+                } else if (piece == 14) {
+                    piecesList.setOwnList(9, ((Integer) piecesList.get(9) + 1));
+                } else if (piece == 15) {
+                    piecesList.setOwnList(10, ((Integer) piecesList.get(10) + 1));
+                } else if (piece == 16) {
+                    piecesList.setOwnList(11, ((Integer) piecesList.get(11) + 1));
+                }                
+                
+            }
+        }
+        
+        return piecesList;
     }
     
     /**

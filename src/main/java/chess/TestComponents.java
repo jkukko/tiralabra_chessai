@@ -12,6 +12,7 @@ import datastructureproject.Coordinate;
 import datastructureproject.Move;
 import chess.engine.GameState;
 import datastructureproject.Evaluation.SimpleBoardEvaluation;
+import datastructureproject.Evaluation.BonusBoardEvaluation;
 import datastructureproject.Logic.ChessLogicWhite;
 import java.util.ArrayList;
 import java.util.List;
@@ -89,6 +90,26 @@ public class TestComponents {
          
         System.out.println(evaluation.evalueation(board, 1));
         
+        
+        System.out.println("TESTATAAN UUSI ARVIOINTI --------");
+        System.out.println("");
+        System.out.println("");
+        int[][] table1 = 
+        {
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 2, 3, 4, 5, 6, 4, 3, 2},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0,11,11,11,11,11,11,11,11},
+            {0,12,13,14,15,16,14,13,12},
+        };
+        ChessBoard testausta = new ChessBoard(table1);
+        BonusBoardEvaluation eva = new BonusBoardEvaluation();
+        System.out.println(eva.evalueation(testausta, 2));
+        System.out.println(testausta.getPieces());
         
     }
     

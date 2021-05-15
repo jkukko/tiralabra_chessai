@@ -22,21 +22,21 @@ public class TestMinMax {
         {
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 2, 3, 4, 5, 6, 4, 3, 2},
-            {0, 0, 1, 1, 1, 1, 1, 1, 1},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 1, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0,11, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0,11, 0,11,11,11,11,11,11},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0,11,11,11,11,11,11,11,11},
             {0,12,13,14,15,16,14,13,12},
         };  
         int[][] table1 = 
         {
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 2, 3, 4, 5, 6, 4, 3, 2},
-            {0, 0, 1, 1, 1, 1, 1, 1, 1},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 1, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0,11,11,11,11,11,11,11,11},
@@ -51,10 +51,11 @@ public class TestMinMax {
         
         long startTime = System.currentTimeMillis();
         //Move m = mm.getBestMove(board, 5, 1);
-        Move mab = mmAB.getBestMove(board, 5, 1);
+        Move m = mmAB.getBestMove(board, 5, 1);
         long stopTime = System.currentTimeMillis();
         
         System.out.println("Elapsed time was " + (double) ((stopTime - startTime) / 1000) + " miliseconds.");
+        System.out.println(mmAB.getCount());
         //m.printMove();
         //mab.printMove();
         //System.out.println(mm.getCount());

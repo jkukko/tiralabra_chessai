@@ -30,3 +30,12 @@
 * minimax works --> 6 depth --> ~ 200 000 000 possible positions evaluated
 * minimaxalphabesta
 * time estimate 5 hours
+
+14.5.2021
+* demo
+* new evaluation function
+* time estimate 3 hours
+
+15.5.2021
+* new evaluation function
+* time estimate 3 hours
