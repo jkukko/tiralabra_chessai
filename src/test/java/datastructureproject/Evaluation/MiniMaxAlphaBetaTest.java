@@ -4,26 +4,27 @@
  * and open the template in the editor.
  */
 package datastructureproject.Evaluation;
+
 import datastructureproject.BasicElements.ChessBoard;
-import datastructureproject.Brain.MiniMax;
-import org.junit.After;
+import datastructureproject.Brain.MiniMaxAlphaBeta;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 /**
  *
  * @author kukkojoo
  */
-public class MiniMaxTest {
-    MiniMax mm;
+public class MiniMaxAlphaBetaTest {
+    MiniMaxAlphaBeta mm;
     ChessBoard board;
     
-    public MiniMaxTest() {
+    public MiniMaxAlphaBetaTest() {
         board = new ChessBoard();
         board.initBoard();
-        mm = new MiniMax(board);
+        mm = new MiniMaxAlphaBeta(board);
     }
     @BeforeClass
     public static void setUpClass() {
@@ -41,7 +42,7 @@ public class MiniMaxTest {
     public void testInitBoard() {
         assertEquals("e2e4", mm.getBestMove(board, 3, 1).getMove());
     }
-    
+
     @Test
     public void testOneMove() {
         int[][] table = {
@@ -57,6 +58,5 @@ public class MiniMaxTest {
         };
         ChessBoard board1 = new ChessBoard(table);
         assertEquals("a4b5", mm.getBestMove(board1, 1, 1).getMove());
-    }    
-    
+    }
 }
