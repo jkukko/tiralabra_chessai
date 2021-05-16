@@ -53,7 +53,7 @@ End Game and depth 5
 * Alpha beta only inspect 2.17 % of branches
 
 # Missing things and improvements
-There is still work need for game logic engine. For example I did not manage to do upgrade from pawn to queen. This should be actually pretty easy fix. Additionally, I would like to create better evaluation function. BonusBoard is at least giving better evaluation than simple. I think the most problematic part of evaluation is start of the game.
+There is still work need for game logic engine. For example I did not manage to do upgrade from pawn to queen. This should be actually pretty easy fix. Additionally, there is still work in checkmate function. I would like to create better evaluation function. BonusBoard is at least giving better evaluation than simple. I think the most problematic part of evaluation is start of the game.
 
 # Sources
 * [Evaluation](https://www.chessprogramming.org/Simplified_Evaluation_Function)
