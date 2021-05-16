@@ -206,6 +206,13 @@ public class BonusBoardEvaluation implements BoardEvaluation {
             {0, -50, -40, -30, -20, -20, -30, -40, -50},
         };
     
+    /**
+     * Evaluates given chessboard
+     * @param chessBoard a chessboard
+     * @param player a player
+     * @return value of board
+     */
+    
     @Override
     public int evalueation(ChessBoard chessBoard, int player) {
         int value = 0;
