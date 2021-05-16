@@ -55,3 +55,5 @@ End Game and depth 5
 # Missing things and improvements
 There is still work need for game logic engine. For example I did not manage to do upgrade from pawn to queen. This should be actually pretty easy fix. Additionally, I would like to create better evaluation function. BonusBoard is at least giving better evaluation than simple. I think the most problematic part of evaluation is start of the game.
 
+# Sources
+* [Evaluation](https://www.chessprogramming.org/Simplified_Evaluation_Function)
