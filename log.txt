@@ -1,183 +1,189 @@
-2021-05-15T13:20:27.612024 MESSAGE: force
-2021-05-15T13:20:27.677290 MESSAGE: new
-2021-05-15T13:20:27.677490 MESSAGE: random
-2021-05-15T13:20:27.677694 MESSAGE: level 40 5 0
-2021-05-15T13:20:27.679257 MESSAGE: post
-2021-05-15T13:20:27.679533 MESSAGE: hard
-2021-05-15T13:20:27.679861 MESSAGE: accepted done
-2021-05-15T13:20:27.680139 MESSAGE: accepted sigint
-2021-05-15T13:20:27.680396 MESSAGE: accepted sigterm
-2021-05-15T13:20:27.680672 MESSAGE: accepted reuse
-2021-05-15T13:20:27.680918 MESSAGE: accepted usermove
-2021-05-15T13:20:27.681166 MESSAGE: accepted myname
-2021-05-15T13:20:27.681430 MESSAGE: accepted done
-2021-05-15T13:20:27.681699 MESSAGE: new
-2021-05-15T13:20:27.681918 MESSAGE: random
-2021-05-15T13:20:27.682310 MESSAGE: level 40 5 0
-2021-05-15T13:20:27.682552 MESSAGE: post
-2021-05-15T13:20:27.682701 MESSAGE: hard
-2021-05-15T13:20:44.147565 MESSAGE: black
-2021-05-15T13:20:44.148562 MESSAGE: time 30000
-2021-05-15T13:20:44.149712 MESSAGE: otim 30000
-2021-05-15T13:20:44.150451 MESSAGE: white
-2021-05-15T13:20:44.739624 MESSAGE: go
-2021-05-15T13:20:47.534169 MESSAGE: time 29940
-2021-05-15T13:20:47.535742 MESSAGE: otim 29720
-2021-05-15T13:20:47.536619 MESSAGE: usermove c7c6
-2021-05-15T13:20:47.537410 MESSAGE: [e2e4, c7c6]
-2021-05-15T13:20:50.552672 MESSAGE: time 29885
-2021-05-15T13:20:50.553812 MESSAGE: otim 29474
-2021-05-15T13:20:50.554321 MESSAGE: usermove d7d5
-2021-05-15T13:20:50.554881 MESSAGE: [e2e4, c7c6, d2d4, d7d5]
-2021-05-15T13:20:55.328141 MESSAGE: quit
-2021-05-15T13:20:56.495665 MESSAGE: new
-2021-05-15T13:20:56.541034 MESSAGE: random
-2021-05-15T13:20:56.541211 MESSAGE: level 40 5 0
-2021-05-15T13:20:56.541472 MESSAGE: post
-2021-05-15T13:20:56.541614 MESSAGE: hard
-2021-05-15T13:20:56.541833 MESSAGE: accepted done
-2021-05-15T13:20:56.541991 MESSAGE: accepted sigint
-2021-05-15T13:20:56.542158 MESSAGE: accepted sigterm
-2021-05-15T13:20:56.542338 MESSAGE: accepted reuse
-2021-05-15T13:20:56.542505 MESSAGE: accepted usermove
-2021-05-15T13:20:56.542675 MESSAGE: accepted myname
-2021-05-15T13:20:56.542845 MESSAGE: accepted done
-2021-05-15T13:20:59.546980 MESSAGE: black
-2021-05-15T13:20:59.548027 MESSAGE: time 30000
-2021-05-15T13:20:59.549260 MESSAGE: otim 30000
-2021-05-15T13:20:59.549899 MESSAGE: white
-2021-05-15T13:21:00.232356 MESSAGE: go
-2021-05-15T13:21:01.581729 MESSAGE: time 29931
-2021-05-15T13:21:01.583131 MESSAGE: otim 29865
-2021-05-15T13:21:01.583828 MESSAGE: usermove d7d6
-2021-05-15T13:21:01.584600 MESSAGE: [e2e4, d7d6]
-2021-05-15T13:21:04.350437 MESSAGE: time 29864
-2021-05-15T13:21:04.351413 MESSAGE: otim 29655
-2021-05-15T13:21:04.352097 MESSAGE: usermove b7b6
-2021-05-15T13:21:04.352634 MESSAGE: [e2e4, d7d6, d2d4, b7b6]
-2021-05-15T13:21:05.999491 MESSAGE: time 29784
-2021-05-15T13:21:06.000100 MESSAGE: otim 29570
-2021-05-15T13:21:06.000465 MESSAGE: usermove c7c5
-2021-05-15T13:21:06.000971 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5]
-2021-05-15T13:21:07.645604 MESSAGE: time 29707
-2021-05-15T13:21:07.646055 MESSAGE: otim 29483
-2021-05-15T13:21:07.646267 MESSAGE: usermove b6c5
-2021-05-15T13:21:07.646465 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5]
-2021-05-15T13:21:09.563576 MESSAGE: time 29654
-2021-05-15T13:21:09.563834 MESSAGE: otim 29344
-2021-05-15T13:21:09.563975 MESSAGE: usermove e7d6
-2021-05-15T13:21:09.564128 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6]
-2021-05-15T13:21:12.884459 MESSAGE: time 29563
-2021-05-15T13:21:12.885099 MESSAGE: otim 29103
-2021-05-15T13:21:12.885495 MESSAGE: usermove f7f6
-2021-05-15T13:21:12.885878 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6]
-2021-05-15T13:21:15.375536 MESSAGE: time 29504
-2021-05-15T13:21:15.375964 MESSAGE: otim 28912
-2021-05-15T13:21:15.376201 MESSAGE: usermove h8g8
-2021-05-15T13:21:15.376499 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8]
-2021-05-15T13:21:19.108874 MESSAGE: time 29454
-2021-05-15T13:21:19.109772 MESSAGE: otim 28589
-2021-05-15T13:21:19.110312 MESSAGE: usermove g7g6
-2021-05-15T13:21:19.110953 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6]
-2021-05-15T13:21:21.932911 MESSAGE: time 29401
-2021-05-15T13:21:21.933619 MESSAGE: otim 28360
-2021-05-15T13:21:21.934067 MESSAGE: usermove d8d6
-2021-05-15T13:21:21.934564 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6]
-2021-05-15T13:21:23.524772 MESSAGE: time 29359
-2021-05-15T13:21:23.525804 MESSAGE: otim 28243
-2021-05-15T13:21:23.526355 MESSAGE: usermove f6f5
-2021-05-15T13:21:23.526967 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5]
-2021-05-15T13:21:25.780813 MESSAGE: time 29322
-2021-05-15T13:21:25.781694 MESSAGE: otim 28054
-2021-05-15T13:21:25.782228 MESSAGE: usermove d6e5
-2021-05-15T13:21:25.782678 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5]
-2021-05-15T13:21:27.380416 MESSAGE: time 29311
-2021-05-15T13:21:27.381176 MESSAGE: otim 27905
-2021-05-15T13:21:27.381715 MESSAGE: usermove e5c7
-2021-05-15T13:21:27.382369 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7]
-2021-05-15T13:21:29.896418 MESSAGE: time 29273
-2021-05-15T13:21:29.896690 MESSAGE: otim 27692
-2021-05-15T13:21:29.896858 MESSAGE: usermove g8g7
-2021-05-15T13:21:29.896998 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7]
-2021-05-15T13:21:34.116633 MESSAGE: time 29162
-2021-05-15T13:21:34.117569 MESSAGE: otim 27380
-2021-05-15T13:21:34.118201 MESSAGE: usermove c8a6
-2021-05-15T13:21:34.118956 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6]
-2021-05-15T13:21:39.485191 MESSAGE: time 29123
-2021-05-15T13:21:39.486288 MESSAGE: otim 26883
-2021-05-15T13:21:39.487119 MESSAGE: usermove f8d6
-2021-05-15T13:21:39.487921 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6]
-2021-05-15T13:21:41.588239 MESSAGE: time 29093
-2021-05-15T13:21:41.589112 MESSAGE: otim 26702
-2021-05-15T13:21:41.589605 MESSAGE: usermove d6h2
-2021-05-15T13:21:41.590315 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2]
-2021-05-15T13:21:51.688880 MESSAGE: time 29060
-2021-05-15T13:21:51.689131 MESSAGE: otim 25725
-2021-05-15T13:21:51.689295 MESSAGE: usermove g7e7
-2021-05-15T13:21:51.689480 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7]
-2021-05-15T13:21:54.769513 MESSAGE: time 29032
-2021-05-15T13:21:54.769816 MESSAGE: otim 25445
-2021-05-15T13:21:54.769948 MESSAGE: usermove f5g4
-2021-05-15T13:21:54.770083 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4]
-2021-05-15T13:21:57.203317 MESSAGE: time 28984
-2021-05-15T13:21:57.204380 MESSAGE: otim 25250
-2021-05-15T13:21:57.204940 MESSAGE: usermove g6g5
-2021-05-15T13:21:57.205550 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5]
-2021-05-15T13:22:02.171909 MESSAGE: time 28953
-2021-05-15T13:22:02.172842 MESSAGE: otim 24784
-2021-05-15T13:22:02.173546 MESSAGE: usermove e7f7
-2021-05-15T13:22:02.174146 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7]
-2021-05-15T13:22:03.211498 MESSAGE: time 28930
-2021-05-15T13:22:03.212309 MESSAGE: otim 24703
-2021-05-15T13:22:03.212853 MESSAGE: usermove f7f6
-2021-05-15T13:22:03.213441 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6]
-2021-05-15T13:22:08.925380 MESSAGE: time 28900
-2021-05-15T13:22:08.926250 MESSAGE: otim 24161
-2021-05-15T13:22:08.926728 MESSAGE: usermove b8c6
-2021-05-15T13:22:08.927190 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6]
-2021-05-15T13:22:10.658877 MESSAGE: time 28854
-2021-05-15T13:22:10.659904 MESSAGE: otim 24034
-2021-05-15T13:22:10.660550 MESSAGE: usermove c6a5
-2021-05-15T13:22:10.661227 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5]
-2021-05-15T13:22:13.783605 MESSAGE: time 28826
-2021-05-15T13:22:13.784436 MESSAGE: otim 23750
-2021-05-15T13:22:13.784845 MESSAGE: usermove f6f3
-2021-05-15T13:22:13.785291 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3]
-2021-05-15T13:22:15.771036 MESSAGE: time 28798
-2021-05-15T13:22:15.771668 MESSAGE: otim 23579
-2021-05-15T13:22:15.772049 MESSAGE: usermove c7c5
-2021-05-15T13:22:15.772422 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5]
-2021-05-15T13:22:17.691125 MESSAGE: time 28764
-2021-05-15T13:22:17.691648 MESSAGE: otim 23421
-2021-05-15T13:22:17.691944 MESSAGE: usermove f3c3
-2021-05-15T13:22:17.692353 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3]
-2021-05-15T13:22:20.347064 MESSAGE: time 28759
-2021-05-15T13:22:20.347896 MESSAGE: otim 23160
-2021-05-15T13:22:20.348492 MESSAGE: usermove c3a3
-2021-05-15T13:22:20.349122 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3]
-2021-05-15T13:22:21.643632 MESSAGE: time 28740
-2021-05-15T13:22:21.644384 MESSAGE: otim 23050
-2021-05-15T13:22:21.644800 MESSAGE: usermove a3a1
-2021-05-15T13:22:21.645229 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1]
-2021-05-15T13:22:23.117082 MESSAGE: time 28722
-2021-05-15T13:22:23.118088 MESSAGE: otim 22920
-2021-05-15T13:22:23.118750 MESSAGE: usermove c5b4
-2021-05-15T13:22:23.119543 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1, b2b4, c5b4]
-2021-05-15T13:22:24.343371 MESSAGE: time 28714
-2021-05-15T13:22:24.345866 MESSAGE: otim 22806
-2021-05-15T13:22:24.346355 MESSAGE: usermove a1b1
-2021-05-15T13:22:24.348684 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1, b2b4, c5b4, e1f2, a1b1]
-2021-05-15T13:22:26.634761 MESSAGE: time 28676
-2021-05-15T13:22:26.635057 MESSAGE: otim 22614
-2021-05-15T13:22:26.636219 MESSAGE: usermove b1d1
-2021-05-15T13:22:26.636413 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1, b2b4, c5b4, e1f2, a1b1, f2e3, b1d1]
-2021-05-15T13:22:28.336486 MESSAGE: time 28674
-2021-05-15T13:22:28.336782 MESSAGE: otim 22446
-2021-05-15T13:22:28.336954 MESSAGE: usermove g4g3
-2021-05-15T13:22:28.337163 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1, b2b4, c5b4, e1f2, a1b1, f2e3, b1d1, e3f2, g4g3]
-2021-05-15T13:22:29.784695 MESSAGE: time 28669
-2021-05-15T13:22:29.785081 MESSAGE: otim 22306
-2021-05-15T13:22:29.785295 MESSAGE: usermove b4b3
-2021-05-15T13:22:29.785603 MESSAGE: [e2e4, d7d6, d2d4, b7b6, g1f3, c7c5, d4c5, b6c5, d1d6, e7d6, f1c4, f7f6, c4g8, h8g8, c1f4, g7g6, f4d6, d8d6, h1f1, f6f5, e4e5, d6e5, e1d2, e5c7, b1c3, g8g7, d2c1, c8a6, f1d1, f8d6, c3b1, d6h2, f3e1, g7e7, g2g4, f5g4, f2f4, g6g5, f4f5, e7f7, f5f6, f7f6, a2a4, b8c6, a4a5, c6a5, e1d3, f6f3, d3c5, c7c5, c2c3, f3c3, c1d2, c3a3, d2e1, a3a1, b2b4, c5b4, e1f2, a1b1, f2e3, b1d1, e3f2, g4g3, f2e3, b4b3]
-2021-05-15T13:22:36.522543 MESSAGE: result * {xboard exit}
-2021-05-15T13:22:36.522761 MESSAGE: quit
+2021-05-16T13:17:46.679507 MESSAGE: force
+2021-05-16T13:17:46.793684 MESSAGE: new
+2021-05-16T13:17:46.793904 MESSAGE: random
+2021-05-16T13:17:46.794074 MESSAGE: level 40 5 0
+2021-05-16T13:17:46.794344 MESSAGE: post
+2021-05-16T13:17:46.796255 MESSAGE: hard
+2021-05-16T13:17:46.796510 MESSAGE: accepted done
+2021-05-16T13:17:46.796668 MESSAGE: accepted sigint
+2021-05-16T13:17:46.796842 MESSAGE: accepted sigterm
+2021-05-16T13:17:46.797011 MESSAGE: accepted reuse
+2021-05-16T13:17:46.797166 MESSAGE: accepted usermove
+2021-05-16T13:17:46.797332 MESSAGE: accepted myname
+2021-05-16T13:17:46.799279 MESSAGE: accepted done
+2021-05-16T13:17:46.799443 MESSAGE: new
+2021-05-16T13:17:46.799592 MESSAGE: random
+2021-05-16T13:17:46.799744 MESSAGE: level 40 5 0
+2021-05-16T13:17:46.799916 MESSAGE: post
+2021-05-16T13:17:46.800079 MESSAGE: hard
+2021-05-16T13:17:47.892721 MESSAGE: black
+2021-05-16T13:17:47.893010 MESSAGE: time 30000
+2021-05-16T13:17:47.893263 MESSAGE: otim 30000
+2021-05-16T13:17:47.893529 MESSAGE: white
+2021-05-16T13:17:48.468668 MESSAGE: go
+2021-05-16T13:17:49.558685 MESSAGE: time 29942
+2021-05-16T13:17:49.559709 MESSAGE: otim 29891
+2021-05-16T13:17:49.560114 MESSAGE: usermove d7d6
+2021-05-16T13:17:49.560502 MESSAGE: [e2e4, d7d6]
+2021-05-16T13:17:51.129708 MESSAGE: time 29873
+2021-05-16T13:17:51.130204 MESSAGE: otim 29802
+2021-05-16T13:17:51.130539 MESSAGE: usermove c7c5
+2021-05-16T13:17:51.130857 MESSAGE: [e2e4, d7d6, d2d4, c7c5]
+2021-05-16T13:17:53.336986 MESSAGE: time 29785
+2021-05-16T13:17:53.339289 MESSAGE: otim 29669
+2021-05-16T13:17:53.339837 MESSAGE: usermove c5d4
+2021-05-16T13:17:53.340150 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4]
+2021-05-16T13:17:54.464945 MESSAGE: time 29760
+2021-05-16T13:17:54.465562 MESSAGE: otim 29581
+2021-05-16T13:17:54.465896 MESSAGE: usermove d6e5
+2021-05-16T13:17:54.466282 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5]
+2021-05-16T13:17:56.549228 MESSAGE: time 29731
+2021-05-16T13:17:56.549921 MESSAGE: otim 29402
+2021-05-16T13:17:56.550380 MESSAGE: usermove g7g5
+2021-05-16T13:17:56.550849 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5]
+2021-05-16T13:17:59.341643 MESSAGE: time 29696
+2021-05-16T13:17:59.342339 MESSAGE: otim 29158
+2021-05-16T13:17:59.342671 MESSAGE: usermove f7f6
+2021-05-16T13:17:59.343047 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6]
+2021-05-16T13:18:00.604892 MESSAGE: time 29669
+2021-05-16T13:18:00.605725 MESSAGE: otim 29059
+2021-05-16T13:18:00.607894 MESSAGE: usermove g8h6
+2021-05-16T13:18:00.608296 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6]
+2021-05-16T13:18:03.000405 MESSAGE: time 29637
+2021-05-16T13:18:03.002859 MESSAGE: otim 28851
+2021-05-16T13:18:03.003110 MESSAGE: usermove h6g4
+2021-05-16T13:18:03.003489 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4]
+2021-05-16T13:18:05.323164 MESSAGE: time 29603
+2021-05-16T13:18:05.323449 MESSAGE: otim 28653
+2021-05-16T13:18:05.323648 MESSAGE: usermove g5f4
+2021-05-16T13:18:05.323818 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4]
+2021-05-16T13:18:09.208145 MESSAGE: time 29573
+2021-05-16T13:18:09.209351 MESSAGE: otim 28295
+2021-05-16T13:18:09.209990 MESSAGE: usermove c8e6
+2021-05-16T13:18:09.210601 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6]
+2021-05-16T13:18:12.555562 MESSAGE: time 29537
+2021-05-16T13:18:12.557825 MESSAGE: otim 27996
+2021-05-16T13:18:12.558064 MESSAGE: usermove b7b6
+2021-05-16T13:18:12.558441 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6]
+2021-05-16T13:18:14.878287 MESSAGE: time 29468
+2021-05-16T13:18:14.879250 MESSAGE: otim 27833
+2021-05-16T13:18:14.879751 MESSAGE: usermove e5d4
+2021-05-16T13:18:14.880303 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4]
+2021-05-16T13:18:17.533530 MESSAGE: time 29404
+2021-05-16T13:18:17.534080 MESSAGE: otim 27632
+2021-05-16T13:18:17.534396 MESSAGE: usermove e6g4
+2021-05-16T13:18:17.534809 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4]
+2021-05-16T13:18:20.744161 MESSAGE: time 29348
+2021-05-16T13:18:20.745150 MESSAGE: otim 27366
+2021-05-16T13:18:20.745777 MESSAGE: usermove h8g8
+2021-05-16T13:18:20.746430 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8]
+2021-05-16T13:18:23.462027 MESSAGE: time 29252
+2021-05-16T13:18:23.462940 MESSAGE: otim 27190
+2021-05-16T13:18:23.463471 MESSAGE: usermove a8b8
+2021-05-16T13:18:23.464138 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8]
+2021-05-16T13:18:35.982363 MESSAGE: time 29134
+2021-05-16T13:18:35.982996 MESSAGE: otim 26056
+2021-05-16T13:18:35.983353 MESSAGE: usermove g4f5
+2021-05-16T13:18:35.983813 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5]
+2021-05-16T13:18:37.860592 MESSAGE: time 29086
+2021-05-16T13:18:37.861478 MESSAGE: otim 25916
+2021-05-16T13:18:37.862073 MESSAGE: usermove f5h7
+2021-05-16T13:18:37.862684 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7]
+2021-05-16T13:18:39.809633 MESSAGE: time 29049
+2021-05-16T13:18:39.809934 MESSAGE: otim 25758
+2021-05-16T13:18:39.810096 MESSAGE: usermove h7b1
+2021-05-16T13:18:39.810264 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1]
+2021-05-16T13:18:43.821454 MESSAGE: time 29031
+2021-05-16T13:18:43.822453 MESSAGE: otim 25376
+2021-05-16T13:18:43.823059 MESSAGE: usermove b8b7
+2021-05-16T13:18:43.823676 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7]
+2021-05-16T13:18:45.284964 MESSAGE: time 28989
+2021-05-16T13:18:45.285735 MESSAGE: otim 25270
+2021-05-16T13:18:45.286188 MESSAGE: usermove b7a7
+2021-05-16T13:18:45.286745 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7]
+2021-05-16T13:18:49.756977 MESSAGE: time 28973
+2021-05-16T13:18:49.757930 MESSAGE: otim 24840
+2021-05-16T13:18:49.758474 MESSAGE: usermove f8h6
+2021-05-16T13:18:49.759028 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6]
+2021-05-16T13:18:53.748644 MESSAGE: time 28947
+2021-05-16T13:18:53.749487 MESSAGE: otim 24466
+2021-05-16T13:18:53.750082 MESSAGE: usermove a7a2
+2021-05-16T13:18:53.750894 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2]
+2021-05-16T13:18:57.202284 MESSAGE: time 28929
+2021-05-16T13:18:57.202691 MESSAGE: otim 24139
+2021-05-16T13:18:57.202867 MESSAGE: usermove d4d3
+2021-05-16T13:18:57.203048 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3]
+2021-05-16T13:19:04.961481 MESSAGE: time 28921
+2021-05-16T13:19:04.961922 MESSAGE: otim 23372
+2021-05-16T13:19:04.962207 MESSAGE: usermove h6g5
+2021-05-16T13:19:04.962480 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5]
+2021-05-16T13:19:06.842750 MESSAGE: time 28913
+2021-05-16T13:19:06.843284 MESSAGE: otim 23191
+2021-05-16T13:19:06.843667 MESSAGE: usermove g5h4
+2021-05-16T13:19:06.844099 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4]
+2021-05-16T13:19:11.532657 MESSAGE: time 28908
+2021-05-16T13:19:11.533470 MESSAGE: otim 22727
+2021-05-16T13:19:11.534168 MESSAGE: usermove f6f5
+2021-05-16T13:19:11.534852 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5]
+2021-05-16T13:19:14.692686 MESSAGE: time 28889
+2021-05-16T13:19:14.693852 MESSAGE: otim 22430
+2021-05-16T13:19:14.694533 MESSAGE: usermove h4g5
+2021-05-16T13:19:14.695252 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5]
+2021-05-16T13:19:17.684501 MESSAGE: time 28886
+2021-05-16T13:19:17.685421 MESSAGE: otim 22134
+2021-05-16T13:19:17.686031 MESSAGE: usermove g5f6
+2021-05-16T13:19:17.686891 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6]
+2021-05-16T13:19:20.862603 MESSAGE: time 28881
+2021-05-16T13:19:20.862903 MESSAGE: otim 21821
+2021-05-16T13:19:20.863059 MESSAGE: usermove d8c7
+2021-05-16T13:19:20.863217 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7]
+2021-05-16T13:19:28.203586 MESSAGE: time 28874
+2021-05-16T13:19:28.203953 MESSAGE: otim 21094
+2021-05-16T13:19:28.204171 MESSAGE: usermove f6b2
+2021-05-16T13:19:28.204429 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2]
+2021-05-16T13:19:30.603329 MESSAGE: time 28852
+2021-05-16T13:19:30.603949 MESSAGE: otim 20876
+2021-05-16T13:19:30.604321 MESSAGE: usermove e7e6
+2021-05-16T13:19:30.604958 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6]
+2021-05-16T13:19:33.084124 MESSAGE: time 28830
+2021-05-16T13:19:33.085051 MESSAGE: otim 20650
+2021-05-16T13:19:33.085614 MESSAGE: usermove b2a1
+2021-05-16T13:19:33.086340 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1]
+2021-05-16T13:19:37.107357 MESSAGE: time 28808
+2021-05-16T13:19:37.108393 MESSAGE: otim 20269
+2021-05-16T13:19:37.109012 MESSAGE: usermove e6e5
+2021-05-16T13:19:37.109727 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5]
+2021-05-16T13:19:42.680334 MESSAGE: time 28792
+2021-05-16T13:19:42.681235 MESSAGE: otim 19729
+2021-05-16T13:19:42.681472 MESSAGE: usermove c7d6
+2021-05-16T13:19:42.681743 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6]
+2021-05-16T13:19:45.491428 MESSAGE: time 28777
+2021-05-16T13:19:45.492259 MESSAGE: otim 19462
+2021-05-16T13:19:45.492863 MESSAGE: usermove e8f7
+2021-05-16T13:19:45.493388 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7]
+2021-05-16T13:19:51.034980 MESSAGE: time 28750
+2021-05-16T13:19:51.035893 MESSAGE: otim 18935
+2021-05-16T13:19:51.036548 MESSAGE: usermove d6d5
+2021-05-16T13:19:51.037341 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5]
+2021-05-16T13:19:56.970563 MESSAGE: time 28734
+2021-05-16T13:19:56.971552 MESSAGE: otim 18358
+2021-05-16T13:19:56.972120 MESSAGE: usermove f7e7
+2021-05-16T13:19:56.972894 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5, f3d5, f7e7]
+2021-05-16T13:19:59.274877 MESSAGE: time 28729
+2021-05-16T13:19:59.275784 MESSAGE: otim 18132
+2021-05-16T13:19:59.276357 MESSAGE: usermove e7d7
+2021-05-16T13:19:59.277058 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5, f3d5, f7e7, f5e5, e7d7]
+2021-05-16T13:20:01.410709 MESSAGE: time 28721
+2021-05-16T13:20:01.411644 MESSAGE: otim 17926
+2021-05-16T13:20:01.412181 MESSAGE: usermove d7c7
+2021-05-16T13:20:01.412910 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5, f3d5, f7e7, f5e5, e7d7, d5b3, d7c7]
+2021-05-16T13:20:02.683053 MESSAGE: time 58715
+2021-05-16T13:20:02.684216 MESSAGE: otim 47805
+2021-05-16T13:20:02.684953 MESSAGE: usermove c7c6
+2021-05-16T13:20:02.685824 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5, f3d5, f7e7, f5e5, e7d7, d5b3, d7c7, e5d4, c7c6]
+2021-05-16T13:20:04.598622 MESSAGE: time 58710
+2021-05-16T13:20:04.599414 MESSAGE: otim 47619
+2021-05-16T13:20:04.599971 MESSAGE: usermove c6c5
+2021-05-16T13:20:04.600367 MESSAGE: [e2e4, d7d6, d2d4, c7c5, g1e2, c5d4, e4e5, d6e5, h2h4, g7g5, h4h5, f7f6, h5h6, g8h6, g2g4, h6g4, f2f4, g5f4, c2c4, c8e6, c4c5, b7b6, e2d4, e5d4, d1g4, e6g4, c1f4, h8g8, f4b8, a8b8, h1h7, g4f5, c5b6, f5h7, b6a7, h7b1, a1b1, b8b7, f1c4, b7a7, c4g8, f8h6, g8b3, a7a2, b3a2, d4d3, a2e6, h6g5, b1d1, g5h4, e1d2, f6f5, e6f5, h4g5, d2c3, g5f6, c3c4, d8c7, c4d3, f6b2, f5e4, e7e6, e4f3, b2a1, d1a1, e6e5, d3e4, c7d6, a1e1, e8f7, e4f5, d6d5, f3d5, f7e7, f5e5, e7d7, d5b3, d7c7, e5d4, c7c6, d4e5, c6c5]
+2021-05-16T13:20:09.341440 MESSAGE: result * {xboard exit}
+2021-05-16T13:20:09.341770 MESSAGE: quit

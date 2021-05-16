@@ -1,4 +1,4 @@
-## Program structure
+# Program structure
 My chess ai program has following structure. Structure can be divided to six different elements: 
 * basic chess elements
 * game logic
@@ -19,7 +19,7 @@ OwnStructures includes my own creation of list and it is called OwnList.
 ### Evaluation
 My functionality of this element is to evaluate specific chessboard. It has two classes: basic and bonus evaluation. Both classes evaluates chessboard base on certain rules. Bonus Board evaluation uses more complex/better way to evaluate the board.
 
-## Brain
+### Brain
 Brain stucture includes two different versions of minimax algorithms: basic minimax algorithm and alpha beta pruning minimax algorithm.
 
 ### Bot

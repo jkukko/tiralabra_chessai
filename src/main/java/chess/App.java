@@ -3,8 +3,8 @@
  */
 package chess;
 
-import datastructureproject.GameBot;
-import datastructureproject.GameBot2;
+import datastructureproject.Bot.GameBotMiniMax;
+import datastructureproject.Bot.GameBotMiniMaxAB;
 import chess.bot.ChessBot;
 import chess.bot.TestBot;
 import chess.connection.LichessAPI;
@@ -37,7 +37,7 @@ public class App {
         You need to place your bot implementation to the variable below.
         Make sure it implements the interface ChessBot, and don't change the variable name!
         */
-        ChessBot bot = new GameBot2(); // Your bot here!
+        ChessBot bot = new GameBotMiniMaxAB(1); // Your bot here!
 
         if (isLichess) {
             if (token == null) {

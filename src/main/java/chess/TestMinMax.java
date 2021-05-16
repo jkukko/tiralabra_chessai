@@ -5,10 +5,10 @@
  */
 package chess;
 
-import datastructureproject.ChessBoard;
-import datastructureproject.Evaluation.MiniMax;
-import datastructureproject.Evaluation.MiniMaxAlphaBeta;
-import datastructureproject.Move;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.Brain.MiniMax;
+import datastructureproject.Brain.MiniMaxAlphaBeta;
+import datastructureproject.BasicElements.Move;
 import datastructureproject.Logic.ChessLogicBlack;
 
 /**

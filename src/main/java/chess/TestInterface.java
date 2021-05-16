@@ -10,16 +10,16 @@ package chess;
  * @author kukkojoo
  */
 
-import datastructureproject.GameBot;
+import datastructureproject.Bot.GameBotMiniMax;
 import datastructureproject.Logic.ChessLogicBlack;
 import datastructureproject.Logic.ChessLogicWhite;
 import chess.engine.GameState;
 import chess.bot.ChessBot;
 import chess.bot.TestBot;
-import datastructureproject.ChessBoard;
-import datastructureproject.Coordinate;
-import datastructureproject.Move;
-import datastructureproject.ChessLogic;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.BasicElements.Coordinate;
+import datastructureproject.BasicElements.Move;
+import datastructureproject.Logic.ChessLogic;
 import datastructureproject.OwnStructures.OwnList;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class TestInterface {
         //System.out.println(gs.getLatestMove());
 /*        
         ChessBot bot = new TestBot();
-        ChessBot bot2 = new GameBot();
+        ChessBot bot2 = new GameBotMiniMax();
         String move = bot.nextMove(gs);
         String move2 = bot2.nextMove(gs);
         System.out.println(move + ", " + move2);
@@ -44,7 +44,7 @@ public class TestInterface {
         board.initBoard();
         board.printBoard();
 
-        ChessBot bot = new GameBot();
+        ChessBot bot = new GameBotMiniMax();
         System.out.println(bot.nextMove(gs));
 */
 
@@ -53,7 +53,7 @@ public class TestInterface {
         ChessLogic logic = new ChessLogic();
         ChessLogicBlack logicBlack = new ChessLogicBlack();
         ChessLogicWhite logicWhite = new ChessLogicWhite();
-        GameBot gb = new GameBot();
+        GameBotMiniMax gb = new GameBotMiniMax();
 /*            
         String x = "joo";
         while (true) {

@@ -5,11 +5,11 @@
  */
 package chess;
 
-import datastructureproject.GameBot;
-import datastructureproject.ChessLogic;
-import datastructureproject.ChessBoard;
-import datastructureproject.Coordinate;
-import datastructureproject.Move;
+import datastructureproject.Bot.GameBotMiniMax;
+import datastructureproject.Logic.ChessLogic;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.BasicElements.Coordinate;
+import datastructureproject.BasicElements.Move;
 import chess.engine.GameState;
 import datastructureproject.Evaluation.SimpleBoardEvaluation;
 import datastructureproject.Evaluation.BonusBoardEvaluation;
@@ -27,7 +27,7 @@ public class TestComponents {
     public static void main(String [] args) {
         
         List<Move> moves = new ArrayList<>();
-        GameBot gamebot = new GameBot(); 
+        GameBotMiniMax gamebot = new GameBotMiniMax(); 
         GameState gs = new GameState();
         ChessLogic logic = new ChessLogic();
         ChessBoard board = new ChessBoard();
@@ -39,11 +39,7 @@ public class TestComponents {
         board.movePiece(m2);
         board.printBoard();
         Coordinate coor = new Coordinate("h1");
-        moves = logic.checkRook(coor, board);
         
-        for (int i = 0; i < moves.size(); i++) {
-            System.out.println(moves.get(i).getNewCoordinate().getCoordinate());
-        }
         
         gs.setMoves("h2h4");
         //gamebot.parseLatestMove(gs);
