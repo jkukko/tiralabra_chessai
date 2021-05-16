@@ -81,3 +81,9 @@ task performanceTest(type:JavaExec) {
    classpath = sourceSets.main.runtimeClasspath
    main = 'datastructureproject.PerformanceTest'
 }
+
+jar {
+   manifest {
+      attributes 'Main-Class': 'datastructureproject.PerformanceTest'
+   }
+}
