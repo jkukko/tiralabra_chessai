@@ -9,6 +9,7 @@ Weekly reports
 - [week 5](./course_documentation/weekly-reports/week5.md)
 - [week 6](./course_documentation/weekly-reports/week6.md)
 - [Week 7-8](./course_documentation/weekly-reports/week7.md)
+
 Documentation
 - [Definition](./course_documentation/definition-document.md)
 - [Implementation](./course_documentation/implementation_document.md)
