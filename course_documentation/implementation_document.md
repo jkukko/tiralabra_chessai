@@ -57,3 +57,10 @@ There is still work need for game logic engine. For example I did not manage to 
 
 # Sources
 * [Evaluation](https://www.chessprogramming.org/Simplified_Evaluation_Function)
+* [OwnList](http://web.eecs.umich.edu/~aprakash/eecs282/lectures/10-arraylists.pdf)
+* [Chess Programming](https://www.chessprogramming.org/Main_Page)
+* [Shakki](https://fi.wikipedia.org/wiki/Shakki)
+* [Alpha-Beta](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning)
+* [Minimax](https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves)
+* [ChessAi Example youtube](https://www.youtube.com/watch?v=U4ogK0MIzqk)
+
