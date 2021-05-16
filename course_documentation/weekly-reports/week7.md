@@ -39,3 +39,11 @@
 15.5.2021
 * new evaluation function
 * time estimate 3 hours
+
+16.5.2021 morning
+* new tests
+* clean code
+* time estimate 3 hours
+
+16.5.2021 afternoon
+
