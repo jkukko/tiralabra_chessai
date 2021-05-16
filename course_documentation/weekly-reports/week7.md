@@ -43,7 +43,13 @@
 16.5.2021 morning
 * new tests
 * clean code
-* time estimate 3 hours
+* performance test
+* time estimate 4 hours
 
 16.5.2021 afternoon
+* documentation
+* performance test
+* time estimate 3 hours
 
+Week 7-8 time estimate:
+31,5 hours
