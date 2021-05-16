@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.Bot;
 
 /**
  *
@@ -12,28 +12,22 @@ package datastructureproject;
 
 import chess.bot.ChessBot;
 import chess.engine.GameState;
-import datastructureproject.ChessLogic;
-import datastructureproject.ChessBoard;
-import datastructureproject.Evaluation.MiniMax;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
+import datastructureproject.Logic.ChessLogic;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.Brain.MiniMax;
+import datastructureproject.BasicElements.Move;
 import datastructureproject.OwnStructures.OwnList;
 
-public class GameBot implements ChessBot {
+public class GameBotMiniMax implements ChessBot {
     private ChessBoard board;
     private OwnList movesList;
     private ChessLogic logic;
-    private Random random; 
     
-    public GameBot() {
+    public GameBotMiniMax() {
         this.board = new ChessBoard();
         this.board.initBoard();
         this.movesList = new OwnList();
         this.logic = new ChessLogic();
-        this.random = new Random();
     }
     
     public void printBoard() {
@@ -57,7 +51,7 @@ public class GameBot implements ChessBot {
         try {
             //myMove = this.getMove(); Testin Minimax
             MiniMax mm = new MiniMax(board);
-            myMove = mm.getBestMove(board, 2, 1);
+            myMove = mm.getBestMove(board, 4, 1);
             this.board.movePiece(myMove);
             
             return myMove.getMove();
@@ -66,31 +60,5 @@ public class GameBot implements ChessBot {
         }
         return null;
     }
-    
-    public Move getMove() throws Exception {
-        OwnList moves = new OwnList();
-        
-        moves = this.logic.legalMoves(this.board, 1);
-        TimeUnit.SECONDS.sleep(1);
-        Move mv = (Move) moves.get(this.random.nextInt(moves.size()));
-        return mv;
-    }
-
-    public Move getMoveByPlayer(int player) {
-        OwnList moves = new OwnList();
-        moves = this.logic.legalMoves(this.board, player);
-        Move mv = (Move) moves.get(this.random.nextInt(moves.size()));
-        return mv;
-    }
-    
-    // Gameboard does not know about players moves
-    
-    
-    
-    // GET LEGAL MOVE
-    
-    
-    
-    // GET POSSIBLE MOVES
     
 }

@@ -5,7 +5,7 @@
  */
 package datastructureproject.Evaluation;
 
-import datastructureproject.ChessBoard;
+import datastructureproject.BasicElements.ChessBoard;
 
 /**
  *

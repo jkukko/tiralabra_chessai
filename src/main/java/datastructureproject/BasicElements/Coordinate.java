@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.BasicElements;
 
 /**
  *
@@ -72,7 +72,7 @@ public class Coordinate {
      */
     
     public int getX() {
-        String character = this.coordinate.substring(0,1);
+        String character = this.coordinate.substring(0, 1);
         
         if (character.equals("a")) {
             return 1;

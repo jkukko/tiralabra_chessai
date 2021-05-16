@@ -3,11 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.BasicElements;
 
 import datastructureproject.OwnStructures.OwnList;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -208,7 +206,7 @@ public class ChessBoard {
         for (int i = 1; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
                 
-                if(player == 1 && this.board[i][j] == 6) {
+                if (player == 1 && this.board[i][j] == 6) {
                     return new Coordinate(j, i);
                 }
                 
@@ -219,7 +217,7 @@ public class ChessBoard {
                 }
             }
         }
-        return new Coordinate(1,1);
+        return new Coordinate(1, 1);
     }
     
     /**

@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.BasicElements;
+
+import datastructureproject.BasicElements.Coordinate;
 
 /**
  *
@@ -14,8 +16,8 @@ public class Move {
     private Coordinate newCoordinate;
     
     public Move(String move) {
-        this.oldCoordinate = new Coordinate(move.substring(0,2));
-        this.newCoordinate = new Coordinate(move.substring(2,4));
+        this.oldCoordinate = new Coordinate(move.substring(0, 2));
+        this.newCoordinate = new Coordinate(move.substring(2, 4));
     }
     
     public Move(Coordinate oldCoordinate, Coordinate newCoordinate) {

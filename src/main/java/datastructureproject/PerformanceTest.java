@@ -2,6 +2,7 @@ package datastructureproject;
 
 import chess.bot.ChessBot;
 import chess.engine.GameState;
+import datastructureproject.Bot.GameBotMiniMaxAB;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class PerformanceTest {
 
     private ChessBot bot;
     private List<GameState> gsList = new ArrayList();
+    private GameBotMiniMaxAB ownBot;
 
     public void setGsList(List<GameState> gsList) {
         this.gsList = gsList;
@@ -20,7 +22,7 @@ public class PerformanceTest {
 
 
     public static void main(String[] args) {
-        throw new Error("Peformance test, remove this");
+        
         /*
         Set your bot and tests here.
         */

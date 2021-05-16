@@ -5,12 +5,9 @@
  */
 package datastructureproject.Logic;
 
-import datastructureproject.Move;
-import datastructureproject.ChessBoard;
-import datastructureproject.Coordinate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import datastructureproject.BasicElements.Move;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.BasicElements.Coordinate;
 import datastructureproject.OwnStructures.OwnList;
 
 /**
@@ -95,8 +92,9 @@ public class ChessLogicWhite {
             }                
         }
 
-        if (coor.getY() == 2 && board.getBoard()[coor.getY()+1][coor.getX()] == 0) {
-            if (board.getBoard()[coor.getY() + 2][coor.getX()] == 0 && board.getBoard()[coor.getY() + 1][coor.getX()] == 0) {
+        if (coor.getY() == 2 && board.getBoard()[coor.getY() + 1][coor.getX()] == 0) {
+            if (board.getBoard()[coor.getY() + 2][coor.getX()] == 0 
+                    && board.getBoard()[coor.getY() + 1][coor.getX()] == 0) {
                 Move move = new Move(coor, new Coordinate(coor.getX(), coor.getY() + 2));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -124,11 +122,11 @@ public class ChessLogicWhite {
         
         int earlier = 0;
         // Rook moves upwards
-        for (int i = coor.getY()+1; i < 9; i++) {
+        for (int i = coor.getY() + 1; i < 9; i++) {
             earlier = board.getBoard()[i][coor.getX()];
 
             if ((earlier > 0 && earlier < 7)) {
-               break;
+                break;
             }
 
             Move move = new Move(coor, new Coordinate(coor.getX(), i));
@@ -142,11 +140,11 @@ public class ChessLogicWhite {
         }
         
         // Rook moves downwards
-        for (int i = coor.getY()-1; i > 0; i--) {
+        for (int i = coor.getY() - 1; i > 0; i--) {
             earlier = board.getBoard()[i][coor.getX()];
 
             if ((earlier > 0 && earlier < 7)) {
-               break;
+                break;
             }
 
             Move move = new Move(coor, new Coordinate(coor.getX(), i));
@@ -160,11 +158,11 @@ public class ChessLogicWhite {
         }
         
         // Rook moves to right
-        for (int i = coor.getX()+1; i < 9; i++) {
-           earlier = board.getBoard()[coor.getY()][i];
+        for (int i = coor.getX() + 1; i < 9; i++) {
+            earlier = board.getBoard()[coor.getY()][i];
 
             if ((earlier > 0 && earlier < 7)) {
-               break;
+                break;
             }
 
             Move move = new Move(coor, new Coordinate(i, coor.getY()));
@@ -178,11 +176,11 @@ public class ChessLogicWhite {
         }
         
         // Rook moves to left
-        for (int i = coor.getX()-1; i > 0; i--) {
+        for (int i = coor.getX() - 1; i > 0; i--) {
             earlier = board.getBoard()[coor.getY()][i];
 
             if ((earlier > 0 && earlier < 7)) {
-               break;
+                break;
             }
 
             Move move = new Move(coor, new Coordinate(i, coor.getY()));
@@ -210,8 +208,8 @@ public class ChessLogicWhite {
          
         if ((coor.getX() + 2 < 9) && (coor.getY() + 1 < 9)) {
             int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX() + 2];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
-                Move move = new Move(coor, new Coordinate(coor.getX()+2, coor.getY() + 1));
+            if (possiblePosition == 0 || possiblePosition >= 11) {
+                Move move = new Move(coor, new Coordinate(coor.getX() + 2, coor.getY() + 1));
                 if (checkMate(move, board)) {
                     moves.add(move);
                 }                   
@@ -220,7 +218,7 @@ public class ChessLogicWhite {
 
         if ((coor.getX() + 1 < 9) && (coor.getY() + 2 < 9)) {
             int possiblePosition = board.getBoard()[coor.getY() + 2][coor.getX() + 1];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() + 1, coor.getY() + 2));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -230,7 +228,7 @@ public class ChessLogicWhite {
 
         if ((coor.getX() + 1 < 9) && (coor.getY() - 2 > 0)) {
             int possiblePosition = board.getBoard()[coor.getY() - 2][coor.getX() + 1];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() + 1, coor.getY() - 2));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -240,7 +238,7 @@ public class ChessLogicWhite {
         
         if ((coor.getX() + 2 < 9) && (coor.getY() - 1 > 0)) {
             int possiblePosition = board.getBoard()[coor.getY() - 1][coor.getX() + 2];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() + 2, coor.getY() - 1));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -250,7 +248,7 @@ public class ChessLogicWhite {
 
         if ((coor.getX() - 2 > 0) && (coor.getY() + 1 < 9)) {
             int possiblePosition = board.getBoard()[coor.getY() + 1][coor.getX() - 2];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() - 2, coor.getY() + 1));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -260,7 +258,7 @@ public class ChessLogicWhite {
 
         if ((coor.getX() - 1 > 0) && (coor.getY() + 2 < 9)) {
             int possiblePosition = board.getBoard()[coor.getY() + 2][coor.getX() - 1];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() - 1, coor.getY() + 2));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -270,7 +268,7 @@ public class ChessLogicWhite {
         
         if ((coor.getX() - 1 > 0) && (coor.getY() - 2 > 0)) {
             int possiblePosition = board.getBoard()[coor.getY() - 2][coor.getX() - 1];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() - 1, coor.getY() - 2));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -280,7 +278,7 @@ public class ChessLogicWhite {
         
         if ((coor.getX() - 2 > 0) && (coor.getY() - 1 > 0)) {
             int possiblePosition = board.getBoard()[coor.getY() - 1][coor.getX() - 2];
-            if(possiblePosition == 0 || possiblePosition >= 11) {
+            if (possiblePosition == 0 || possiblePosition >= 11) {
                 Move move = new Move(coor, new Coordinate(coor.getX() - 2, coor.getY() - 1));
                 if (checkMate(move, board)) {
                     moves.add(move);
@@ -304,28 +302,28 @@ public class ChessLogicWhite {
         int earlier = 0;
         int xCoor = coor.getX() + 1;
         if (xCoor < 9) {
-        for (int i = coor.getY() + 1; i < 9; i++) {
-            earlier = board.getBoard()[i][xCoor];
+            for (int i = coor.getY() + 1; i < 9; i++) {
+                earlier = board.getBoard()[i][xCoor];
 
-            if ((earlier > 0 && earlier < 7)) {
-               break;
-            }
+                if ((earlier > 0 && earlier < 7)) {
+                    break;
+                }
 
-            Move move = new Move(coor, new Coordinate(xCoor, i));
-            if (checkMate(move, board)) {
-                moves.add(move);
-            }
+                Move move = new Move(coor, new Coordinate(xCoor, i));
+                if (checkMate(move, board)) {
+                    moves.add(move);
+                }
 
-            if (earlier >= 11) {
-                break;
-            }
+                if (earlier >= 11) {
+                    break;
+                }
 
-            xCoor +=1;
+                xCoor += 1;
 
-            if (xCoor == 9) {
-               break;
-            }
-        }            
+                if (xCoor == 9) {
+                    break;
+                }
+            }            
         }
 
         
@@ -351,10 +349,10 @@ public class ChessLogicWhite {
                     break;
                 }
 
-                xCoor -=1;
+                xCoor -= 1;
 
                 if (xCoor == 0) {
-                   break;
+                    break;
                 }
             }            
         }
@@ -367,7 +365,7 @@ public class ChessLogicWhite {
                 earlier = board.getBoard()[i][xCoor];
 
                 if ((earlier > 0 && earlier < 7)) {
-                   break;
+                    break;
                 }
 
                 Move move = new Move(coor, new Coordinate(xCoor, i));
@@ -379,10 +377,10 @@ public class ChessLogicWhite {
                     break;
                 }
 
-                xCoor +=1;
+                xCoor += 1;
 
                 if (xCoor == 9) {
-                   break;
+                    break;
                 }
             }            
         }
@@ -396,7 +394,7 @@ public class ChessLogicWhite {
                 earlier = board.getBoard()[i][xCoor];
 
                 if ((earlier > 0 && earlier < 7)) {
-                   break;
+                    break;
                 }
 
                 Move move = new Move(coor, new Coordinate(xCoor, i));
@@ -408,10 +406,10 @@ public class ChessLogicWhite {
                     break;
                 }
 
-                xCoor -=1;
+                xCoor -= 1;
 
                 if (xCoor == 0) {
-                   break;
+                    break;
                 }
             }
         }
@@ -494,7 +492,7 @@ public class ChessLogicWhite {
                 if ((possiblePosition == 0) || (possiblePosition > 10)) {
                     Move move = new Move(coor, new Coordinate(coor.getX() - 1, coor.getY() - 1));
                     if (checkMate(move, board)) {
-                       moves.add(move);
+                        moves.add(move);
                     }
                 }            
             }
@@ -504,7 +502,7 @@ public class ChessLogicWhite {
                 if ((possiblePosition == 0) || (possiblePosition > 10)) {
                     Move move = new Move(coor, new Coordinate(coor.getX() + 1, coor.getY() - 1));
                     if (checkMate(move, board)) {
-                       moves.add(move);
+                        moves.add(move);
                     }
                 }            
             }
@@ -517,7 +515,7 @@ public class ChessLogicWhite {
                 if ((possiblePosition == 0) || (possiblePosition > 10)) {
                     Move move = new Move(coor, new Coordinate(coor.getX() - 1, coor.getY() + 1));
                     if (checkMate(move, board)) {
-                       moves.add(move);
+                        moves.add(move);
                     }
                 }            
             }
@@ -527,7 +525,7 @@ public class ChessLogicWhite {
                 if ((possiblePosition == 0) || (possiblePosition > 10)) {
                     Move move = new Move(coor, new Coordinate(coor.getX() + 1, coor.getY() + 1));
                     if (checkMate(move, board)) {
-                       moves.add(move);
+                        moves.add(move);
                     }
                 }            
             }
@@ -554,18 +552,17 @@ public class ChessLogicWhite {
 
         // Check Pawn attack
         if (xKing < 8) {
-            if (chessBoardNew.getBoard()[yKing+1][xKing+1] == 11) {
+            if (chessBoardNew.getBoard()[yKing + 1][xKing + 1] == 11) {
                 return false;
             }
         }
         if (xKing > 0) {
-            if (chessBoardNew.getBoard()[yKing+1][xKing-1] == 11) {
+            if (chessBoardNew.getBoard()[yKing + 1][xKing - 1] == 11) {
                 return false;
             }
-        }        
-        
+        }                
         // check Rook and queen Rook attack right
-        for (int i = xKing+1; i < 9; i++) {
+        for (int i = xKing + 1; i < 9; i++) {
             int possiblePosition = board.getBoard()[yKing][i];
             if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
                 break;
@@ -574,9 +571,8 @@ public class ChessLogicWhite {
                 return false;
             }            
         }
-
         // check Rook and queen Rook attack left
-        for (int i = xKing-1; i > 0; i--) {
+        for (int i = xKing - 1; i > 0; i--) {
             int possiblePosition = board.getBoard()[yKing][i];
             if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
                 break;
@@ -585,9 +581,8 @@ public class ChessLogicWhite {
                 return false;
             }            
         }
-
         // check Rook and queen Rook attack up
-        for (int i = yKing+1; i < 9; i++) {
+        for (int i = yKing + 1; i < 9; i++) {
             int possiblePosition = board.getBoard()[i][xKing];
             if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
                 break;
@@ -596,9 +591,8 @@ public class ChessLogicWhite {
                 return false;
             }            
         }
-
         // check Rook and queen Rook attack down
-        for (int i = yKing+1; i > 0; i--) {
+        for (int i = yKing + 1; i > 0; i--) {
             int possiblePosition = board.getBoard()[i][xKing];
             if (possiblePosition != 0 && possiblePosition != 12 && possiblePosition != 15) {
                 break;
@@ -607,63 +601,54 @@ public class ChessLogicWhite {
                 return false;
             }            
         }
-
         // check Knight attact y+2 x+1
         if (yKing < 7 && xKing < 8) {
             if (board.getBoard()[yKing + 2][xKing + 1] == 13) {
                 return false;
             }
-        }
-        
+        }       
         // check Knight attact y+2 x-1
         if (yKing < 7 && xKing > 1) {
             if (board.getBoard()[yKing + 2][xKing - 1] == 13) {
                 return false;
             }
-        }
-        
+        }        
         // check Knight attact y-2 x+1
         if (yKing > 2 && xKing < 7) {
             if (board.getBoard()[yKing - 2][xKing + 1] == 13) {
                 return false;
             }
         }
-
         // check Knight attact y-2 x-1
         if (yKing > 2 && xKing > 1) {
             if (board.getBoard()[yKing - 2][xKing - 1] == 13) {
                 return false;
             }
-        }
-        
+        }       
         // check Knight attact y+1 x+2
         if (yKing < 8 && xKing < 7) {
             if (board.getBoard()[yKing + 1][xKing + 2] == 13) {
                 return false;
             }
-        }
-        
+        }       
         // check Knight attact y-1 x+2
         if (yKing > 1 && xKing < 7) {
             if (board.getBoard()[yKing - 1][xKing + 2] == 13) {
                 return false;
             }
-        }
-        
+        }        
         // check Knight attact y+1 x-2
         if (yKing < 8 && xKing > 2) {
             if (board.getBoard()[yKing + 1][xKing - 2] == 13) {
                 return false;
             }
         }
-
         // check Knight attact y-1 x-2
         if (yKing > 1 && xKing > 2) {
             if (board.getBoard()[yKing - 1][xKing - 2] == 13) {
                 return false;
             }
         }
-
         // check bishop and quuen bishop attack right-up
         for (int i = 1; i < 8; i++) {
             int x = xKing + i;
@@ -679,7 +664,6 @@ public class ChessLogicWhite {
                 return false;
             }                    
         }
-
         // check bishop and quuen bishop attack right-down
         for (int i = 1; i < 8; i++) {
             int x = xKing + i;
@@ -695,7 +679,6 @@ public class ChessLogicWhite {
                 return false;
             }                    
         }
-
         // check bishop and quuen bishop attack left-up
         for (int i = 1; i < 8; i++) {
             int x = xKing - i;
@@ -711,7 +694,6 @@ public class ChessLogicWhite {
                 return false;
             }                    
         }
-
         // check bishop and quuen bishop attack left-down
         for (int i = 1; i < 8; i++) {
             int x = xKing - i;
@@ -726,8 +708,7 @@ public class ChessLogicWhite {
             if (possiblePosition == 14 || possiblePosition == 15) {
                 return false;
             }                    
-        }         
-        
+        }                
         return true;
     }
 

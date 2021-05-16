@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject;
+package datastructureproject.Bot;
 
-import chess.engine.GameState;
 import chess.bot.ChessBot;
-import datastructureproject.ChessBoard;
-import datastructureproject.Move;
-import datastructureproject.Evaluation.MiniMax;
-import datastructureproject.Evaluation.MiniMaxAlphaBeta;
+import datastructureproject.Brain.MiniMaxAlphaBeta;
 import chess.engine.GameState;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.BasicElements.Move;
 /**
  *
  * @author kukkojoo
  */
-public class GameBot2 implements ChessBot {
+public class GameBotMiniMaxAB implements ChessBot {
     private ChessBoard board;
+    private int player;
     
-    public GameBot2() {
-       this.board = new ChessBoard();
-       this.board.initBoard();
+    public GameBotMiniMaxAB(int player) {
+        this.board = new ChessBoard();
+        this.board.initBoard();
+        this.player = player;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class GameBot2 implements ChessBot {
             //myMove = this.getMove(); Testin Minimax
             MiniMaxAlphaBeta mmAB = new MiniMaxAlphaBeta(board);
             //MiniMax mm = new MiniMax(board);
-            myMove = mmAB.getBestMove(board, 4, 1);
+            myMove = mmAB.getBestMove(board, 4, player);
             this.board.movePiece(myMove);
             
             return myMove.getMove();

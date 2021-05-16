@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructureproject.Evaluation;
+package datastructureproject.Brain;
 
-import datastructureproject.ChessBoard;
-import datastructureproject.ChessLogic;
-import datastructureproject.Move;
+import datastructureproject.BasicElements.ChessBoard;
+import datastructureproject.Logic.ChessLogic;
+import datastructureproject.BasicElements.Move;
+import datastructureproject.Evaluation.BonusBoardEvaluation;
 import datastructureproject.OwnStructures.OwnList;
 
 /**
@@ -56,7 +57,6 @@ public class MiniMaxAlphaBeta {
                 value = min(testBoard, (depth - 1), maxValue, minValue);
             }
             
-            System.out.println(move.getOldCoordinate().getCoordinate() + move.getNewCoordinate().getCoordinate() + ": " + value + " " + eaten);
             testBoard.undoMoveWithOldValue(move, eaten);
 
             if (player == 1 && value >= maxValue) {

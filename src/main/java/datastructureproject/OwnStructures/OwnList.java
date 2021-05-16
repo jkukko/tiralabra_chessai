@@ -78,8 +78,8 @@ public class OwnList {
             throw new IndexOutOfBoundsException("Index is negative");
         }
         
-        for (int i = index; i < size-1; i++) {
-            data[i] = data[i+1];
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
         }
         
         size--;
@@ -153,7 +153,7 @@ public class OwnList {
             list +=  (i + 1) + ".(" + data[i].toString() + "), ";
         }
         
-        list += size + ".(" + data[size-1].toString() + ")]";
+        list += size + ".(" + data[size - 1].toString() + ")]";
         
         return list;
     }
